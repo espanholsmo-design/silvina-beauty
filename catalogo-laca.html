@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo LACA — Silvina Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#1f3d2e;
+    --verde-deep:#152a20;
+    --dorado:#c9a66b;
+    --hueso:#f7f4ee;
+    --carbon:#2a2823;
+    --linea:#dcd4c2;
+    --rosa-pro:#9c5b4a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Outfit', sans-serif;
+    background:var(--hueso);
+    color:var(--carbon);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .display{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+
+  /* HEADER */
+  header{
+    background:var(--verde);
+    color:var(--hueso);
+    padding:48px 20px 40px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0;
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--dorado), transparent);
+  }
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--dorado);
+    margin-bottom:14px;
+  }
+  header h1{
+    font-size:clamp(32px, 7vw, 52px);
+    line-height:1.05;
+    margin-bottom:10px;
+  }
+  header p.sub{
+    font-size:14px;
+    color:#d9d3c0;
+    max-width:520px;
+    margin:0 auto;
+    line-height:1.5;
+  }
+
+  /* CONTROLS */
+  .controls{
+    position:sticky; top:0; z-index:20;
+    background:var(--hueso);
+    border-bottom:1px solid var(--linea);
+    padding:14px 16px;
+  }
+  .search-row{
+    display:flex; gap:8px; margin-bottom:12px;
+  }
+  .search-row input{
+    flex:1;
+    font-family:'Outfit', sans-serif;
+    font-size:15px;
+    padding:11px 14px;
+    border:1px solid var(--linea);
+    border-radius:2px;
+    background:#fff;
+    color:var(--carbon);
+  }
+  .search-row input:focus{ outline:1px solid var(--verde); border-color:var(--verde); }
+
+  .usage-toggle{
+    display:flex;
+    border:1px solid var(--verde);
+    border-radius:2px;
+    overflow:hidden;
+    margin-bottom:12px;
+  }
+  .usage-toggle button{
+    flex:1;
+    font-family:'Outfit', sans-serif;
+    font-size:12.5px;
+    letter-spacing:0.03em;
+    padding:10px 6px;
+    background:#fff;
+    color:var(--verde);
+    border:none;
+    cursor:pointer;
+    border-right:1px solid var(--verde);
+    transition:background .15s;
+  }
+  .usage-toggle button:last-child{ border-right:none; }
+  .usage-toggle button.active{
+    background:var(--verde);
+    color:var(--hueso);
+  }
+
+  .cat-scroll{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding-bottom:2px;
+    scrollbar-width:none;
+  }
+  .cat-scroll::-webkit-scrollbar{ display:none; }
+  .cat-chip{
+    flex:0 0 auto;
+    font-family:'Outfit', sans-serif;
+    font-size:12.5px;
+    padding:8px 14px;
+    border:1px solid var(--linea);
+    border-radius:20px;
+    background:#fff;
+    color:var(--carbon);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .cat-chip.active{
+    background:var(--dorado);
+    border-color:var(--dorado);
+    color:var(--verde-deep);
+    font-weight:500;
+  }
+
+  .count-bar{
+    padding:14px 16px 4px;
+    font-size:12px;
+    color:#7a7462;
+    letter-spacing:0.02em;
+  }
+
+  /* PRODUCT GRID */
+  main{ padding:8px 16px 60px; }
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-top:10px;
+  }
+  @media (min-width:640px){
+    .grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (min-width:980px){
+    .grid{ grid-template-columns:1fr 1fr 1fr; }
+  }
+
+  .card{
+    background:#fff;
+    border:1px solid var(--linea);
+    border-radius:3px;
+    padding:18px 18px 16px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .card.pro{
+    border-color:#dcc3ba;
+    background:#fdf9f7;
+  }
+  .badge{
+    position:absolute;
+    top:14px; right:14px;
+    font-size:9.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:4px 8px;
+    border-radius:20px;
+    font-weight:500;
+  }
+  .badge.casa{ background:#e7ede6; color:var(--verde); }
+  .badge.pro{ background:var(--rosa-pro); color:#fff; }
+
+  .card .cat-label{
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--dorado);
+    font-weight:500;
+  }
+  .card h3{
+    font-size:21px;
+    line-height:1.15;
+    padding-right:70px;
+    color:var(--verde-deep);
+  }
+  .card .sline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:15px;
+    color:#6b6553;
+    margin-top:-6px;
+  }
+  .card .benefit{
+    font-size:13.5px;
+    line-height:1.5;
+    color:#4a4638;
+  }
+  .card .meta{
+    margin-top:auto;
+    padding-top:10px;
+    border-top:1px solid #ece7d9;
+    font-size:11.5px;
+    color:#8a8471;
+    line-height:1.6;
+  }
+  .card .meta b{ color:#5c5645; font-weight:500; }
+
+  .empty{
+    text-align:center;
+    padding:60px 20px;
+    color:#8a8471;
+    font-size:14px;
+  }
+
+  footer{
+    text-align:center;
+    padding:30px 20px 50px;
+    font-size:11.5px;
+    color:#9a947f;
+    letter-spacing:0.03em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Silvina Beauty · Reventa autorizada</div>
+  <h1>Catálogo LACA</h1>
+  <p class="sub">Vademecum completo de tratamiento — filtrá por uso en casa o profesional, y por categoría.</p>
+</header>
+
+<div class="controls">
+  <div class="search-row">
+    <input type="text" id="buscador" placeholder="Buscar producto o activo…">
+  </div>
+  <div class="usage-toggle">
+    <button class="active" data-uso="todos">Todos</button>
+    <button data-uso="casa">Uso en casa</button>
+    <button data-uso="pro">Profesional</button>
+  </div>
+  <div class="cat-scroll" id="catScroll"></div>
+</div>
+
+<div class="count-bar" id="countBar"></div>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" style="display:none;">No se encontraron productos con esos filtros.</div>
+</main>
+
+<footer>Laboratorio LACA — información de referencia para uso interno de Silvina Beauty</footer>
+
+<script src="productos.js"></script>
+<script>
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const countBar = document.getElementById('countBar');
+  const catScroll = document.getElementById('catScroll');
+  const buscador = document.getElementById('buscador');
+  const usageBtns = document.querySelectorAll('.usage-toggle button');
+
+  let usoActivo = 'todos';
+  let catActiva = 'todas';
+  let query = '';
+
+  // Build category chips
+  const categorias = ['todas', ...new Set(PRODUCTOS.map(p => p.c))];
+  categorias.forEach(cat => {
+    const chip = document.createElement('button');
+    chip.className = 'cat-chip' + (cat === 'todas' ? ' active' : '');
+    chip.textContent = cat === 'todas' ? 'Todas las categorías' : cat;
+    chip.dataset.cat = cat;
+    chip.addEventListener('click', () => {
+      catActiva = cat;
+      document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      render();
+    });
+    catScroll.appendChild(chip);
+  });
+
+  usageBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      usoActivo = btn.dataset.uso;
+      usageBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+  });
+
+  buscador.addEventListener('input', (e) => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+
+  function render(){
+    const filtrados = PRODUCTOS.filter(p => {
+      const esPro = !!p.pro;
+      if(usoActivo === 'casa' && esPro) return false;
+      if(usoActivo === 'pro' && !esPro) return false;
+      if(catActiva !== 'todas' && p.c !== catActiva) return false;
+      if(query){
+        const hay = (p.n + ' ' + (p.s||'') + ' ' + (p.a||'') + ' ' + p.c).toLowerCase();
+        if(!hay.includes(query)) return false;
+      }
+      return true;
+    });
+
+    grid.innerHTML = '';
+    if(filtrados.length === 0){
+      empty.style.display = 'block';
+    } else {
+      empty.style.display = 'none';
+      filtrados.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card' + (p.pro ? ' pro' : '');
+        card.innerHTML = `
+          <span class="badge ${p.pro ? 'pro' : 'casa'}">${p.pro ? 'Solo gabinete' : 'Uso en casa'}</span>
+          <div class="cat-label">${p.c}</div>
+          <h3>${p.n}</h3>
+          ${p.s ? `<div class="sline">${p.s}</div>` : ''}
+          <div class="benefit">${p.b}</div>
+          <div class="meta">
+            ${p.a ? `<div><b>Activos:</b> ${p.a}</div>` : ''}
+            <div><b>Presentación:</b> ${p.p}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    const totalPro = PRODUCTOS.filter(p => p.pro).length;
+    countBar.textContent = `${filtrados.length} de ${PRODUCTOS.length} productos · ${totalPro} son de uso exclusivo profesional`;
+  }
+
+  render();
+</script>
+
+</body>
+</html>

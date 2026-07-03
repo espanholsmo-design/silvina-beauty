@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silvina Beauty — Cosmética Laboratorio Laca</title>
+<meta name="description" content="Silvina Beauty: revendedora profesional de cosmética Laboratorio Laca. Asesoramiento personalizado y envíos a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --eucalipto:#5E7263;
+    --eucalipto-oscuro:#465548;
+    --champagne:#C6A867;
+    --hueso:#F7F4EE;
+    --hueso-2:#EFEAE0;
+    --carbon:#2C2C28;
+    --gris:#6E6E66;
+    --blanco:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Outfit',sans-serif;
+    background:var(--hueso);
+    color:var(--carbon);
+    line-height:1.6;
+    font-weight:300;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.15;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,244,238,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--hueso-2);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;letter-spacing:.04em;text-decoration:none;}
+  .logo em{font-style:italic;color:var(--eucalipto);}
+  .nav-links{display:flex;gap:26px;list-style:none;}
+  .nav-links a{text-decoration:none;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);transition:color .2s;}
+  .nav-links a:hover,.nav-links a:focus{color:var(--eucalipto-oscuro);}
+  .menu-btn{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--carbon);}
+  @media(max-width:760px){
+    .menu-btn{display:block;}
+    .nav-links{
+      display:none;position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;background:var(--hueso);padding:18px 22px;gap:16px;
+      border-bottom:1px solid var(--hueso-2);
+    }
+    .nav-links.open{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:72px 0 64px;}
+  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;}}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.6rem);}
+  .hero h1 span{font-style:italic;color:var(--eucalipto);}
+  .hero p.lead{margin:18px 0 28px;font-size:1.06rem;color:var(--gris);max-width:46ch;}
+  .btn{
+    display:inline-block;padding:13px 28px;border-radius:100px;
+    text-decoration:none;font-size:.92rem;letter-spacing:.05em;font-weight:500;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--eucalipto);color:var(--blanco);}
+  .btn-primary:hover{box-shadow:0 6px 18px rgba(94,114,99,.35);}
+  .btn-outline{border:1px solid var(--champagne);color:var(--carbon);margin-left:10px;}
+  .btn-outline:hover{background:var(--champagne);color:var(--blanco);}
+  @media(max-width:480px){.btn-outline{margin-left:0;margin-top:10px;}}
+  .hero-actions{display:flex;flex-wrap:wrap;align-items:center;}
+
+  .diagnostico{
+    background:var(--blanco);border:1px solid var(--hueso-2);
+    border-radius:18px;padding:28px;box-shadow:0 12px 32px rgba(44,44,40,.06);
+  }
+  .diagnostico h3{font-size:1.5rem;margin-bottom:6px;}
+  .diagnostico p{font-size:.92rem;color:var(--gris);margin-bottom:16px;}
+  .diagnostico ul{list-style:none;font-size:.92rem;}
+  .diagnostico li{padding:9px 0;border-bottom:1px solid var(--hueso-2);display:flex;gap:10px;align-items:flex-start;}
+  .diagnostico li:last-child{border-bottom:none;}
+  .diagnostico li::before{content:"✦";color:var(--champagne);font-size:.8rem;margin-top:3px;}
+  .diagnostico .btn{margin-top:18px;width:100%;text-align:center;}
+
+  /* ---------- FRANJA ---------- */
+  .franja{background:var(--eucalipto);color:var(--hueso);padding:14px 0;font-size:.88rem;letter-spacing:.05em;}
+  .franja .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;text-align:center;}
+
+  /* ---------- SECCIONES ---------- */
+  section{padding:72px 0;}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne);font-weight:500;margin-bottom:10px;}
+  .sec-title{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:14px;}
+  .sec-intro{color:var(--gris);max-width:60ch;margin-bottom:36px;}
+
+  /* ---------- CATEGORIAS ---------- */
+  .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .cat-card{
+    background:var(--blanco);border:1px solid var(--hueso-2);border-radius:16px;
+    padding:26px;display:flex;flex-direction:column;gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cat-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(44,44,40,.08);}
+  .cat-card h3{font-size:1.35rem;}
+  .cat-card p{font-size:.9rem;color:var(--gris);flex:1;}
+  .cat-card a{font-size:.85rem;letter-spacing:.05em;color:var(--eucalipto-oscuro);text-decoration:none;font-weight:500;}
+  .cat-card a:hover{text-decoration:underline;}
+  .cat-cta{margin-top:34px;text-align:center;}
+
+  /* ---------- COMO COMPRAR ---------- */
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .paso{background:var(--blanco);border:1px solid var(--hueso-2);border-radius:16px;padding:24px;}
+  .paso .num{
+    font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--champagne);
+    line-height:1;margin-bottom:10px;
+  }
+  .paso h3{font-size:1.2rem;margin-bottom:6px;}
+  .paso p{font-size:.9rem;color:var(--gris);}
+
+  /* ---------- SOBRE MI ---------- */
+  .sobre{background:var(--hueso-2);}
+  .sobre-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:center;}
+  @media(max-width:760px){.sobre-grid{grid-template-columns:1fr;}}
+  .sobre-foto{
+    aspect-ratio:4/5;border-radius:18px;background:linear-gradient(160deg,var(--eucalipto) 0%,var(--eucalipto-oscuro) 100%);
+    display:flex;align-items:center;justify-content:center;color:var(--hueso);
+    font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;text-align:center;padding:20px;
+  }
+  .sobre p{color:var(--gris);margin-bottom:14px;}
+
+  /* ---------- PEDIDO ---------- */
+  .pedido-card{
+    background:var(--blanco);border:1px solid var(--hueso-2);border-radius:18px;
+    padding:34px;max-width:640px;margin:0 auto;box-shadow:0 12px 32px rgba(44,44,40,.06);
+  }
+  .campo{margin-bottom:16px;}
+  .campo label{display:block;font-size:.85rem;letter-spacing:.04em;margin-bottom:6px;color:var(--carbon);font-weight:500;}
+  .campo input,.campo textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--hueso-2);border-radius:10px;
+    font-family:'Outfit',sans-serif;font-size:.95rem;background:var(--hueso);color:var(--carbon);
+  }
+  .campo input:focus,.campo textarea:focus{outline:2px solid var(--eucalipto);outline-offset:1px;border-color:var(--eucalipto);}
+  .campo textarea{min-height:96px;resize:vertical;}
+  .pedido-card .btn{width:100%;text-align:center;border:none;cursor:pointer;font-family:'Outfit',sans-serif;}
+  .pedido-nota{font-size:.82rem;color:var(--gris);margin-top:14px;text-align:center;}
+  .mp-btn{
+    display:block;text-align:center;margin-top:12px;padding:13px 28px;border-radius:100px;
+    background:var(--hueso-2);color:var(--gris);text-decoration:none;font-size:.9rem;letter-spacing:.04em;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--carbon);color:var(--hueso);padding:44px 0 30px;font-size:.85rem;}
+  .foot-top{display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:space-between;margin-bottom:22px;}
+  footer a{color:var(--champagne);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{color:#9a9a92;font-size:.78rem;max-width:80ch;line-height:1.55;}
+
+  /* ---------- WHATSAPP FLOTANTE ---------- */
+  .wa-fab{
+    position:fixed;right:20px;bottom:20px;z-index:60;
+    width:56px;height:56px;border-radius:50%;
+    background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.22);
+    transition:transform .15s ease;
+  }
+  .wa-fab:hover{transform:scale(1.06);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio">Silvina <em>Beauty</em></a>
+    <button class="menu-btn" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#categorias">Productos</a></li>
+      <li><a href="catalogo-laca.html">Catálogo</a></li>
+      <li><a href="#como-comprar">Cómo comprar</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#pedido">Hacer pedido</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Cosmética profesional Laboratorio Laca</p>
+        <h1>Tu piel, cuidada con <span>criterio profesional</span></h1>
+        <p class="lead">Soy Silvina, técnica en Bio Spa Facial y revendedora autorizada de Laboratorio Laca. Te asesoro para elegir los productos correctos para tu tipo de piel, con envíos a todo el país.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pedido">Hacer mi pedido</a>
+          <a class="btn btn-outline" href="catalogo-laca.html">Ver catálogo completo</a>
+        </div>
+      </div>
+      <aside class="diagnostico">
+        <h3>Diagnóstico de piel sin cargo</h3>
+        <p>Antes de comprar, contame cómo está tu piel y te recomiendo la rutina justa.</p>
+        <ul>
+          <li>Asesoramiento personalizado por WhatsApp</li>
+          <li>Productos según tu tipo de piel y edad</li>
+          <li>Rutinas simples, sin comprar de más</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/549295412458?text=Hola%20Silvina%2C%20quiero%20un%20diagn%C3%B3stico%20de%20piel" target="_blank" rel="noopener">Pedir mi diagnóstico</a>
+      </aside>
+    </div>
+  </section>
+
+  <div class="franja">
+    <div class="wrap">
+      <span>✦ Envíos a todo el país</span>
+      <span>✦ Productos originales Laboratorio Laca</span>
+      <span>✦ Asesoramiento profesional incluido</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIAS -->
+  <section id="categorias">
+    <div class="wrap">
+      <p class="eyebrow">Líneas de productos</p>
+      <h2 class="sec-title">Elegí por lo que tu piel necesita</h2>
+      <p class="sec-intro">Trabajo con todas las líneas de Laboratorio Laca, un laboratorio argentino con más de 60 años de trayectoria en cosmética.</p>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <h3>Cuidados básicos</h3>
+          <p>Limpieza, tonificación e hidratación diaria: la base de toda rutina saludable.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+        <div class="cat-card">
+          <h3>Antiage</h3>
+          <p>Firmeza, luminosidad y tratamiento de líneas de expresión con activos concentrados.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+        <div class="cat-card">
+          <h3>Hidratación</h3>
+          <p>Cremas y serums para recuperar el agua que tu piel pierde todos los días.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+        <div class="cat-card">
+          <h3>Protección solar</h3>
+          <p>Protectores para rostro y cuerpo, el paso que no puede faltar en ninguna estación.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+        <div class="cat-card">
+          <h3>Pieles grasas y delicadas</h3>
+          <p>Líneas específicas para pieles con brillo, sensibles o reactivas.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+        <div class="cat-card">
+          <h3>Corporales y capilares</h3>
+          <p>Cuidado del cuerpo, manos, pies y cabello con la misma calidad de laboratorio.</p>
+          <a href="catalogo-laca.html">Ver productos →</a>
+        </div>
+      </div>
+      <div class="cat-cta">
+        <a class="btn btn-primary" href="catalogo-laca.html">Ver el catálogo completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO COMPRAR -->
+  <section id="como-comprar" class="sobre">
+    <div class="wrap">
+      <p class="eyebrow">Paso a paso</p>
+      <h2 class="sec-title">Cómo comprar</h2>
+      <div class="pasos">
+        <div class="paso">
+          <div class="num">1</div>
+          <h3>Elegís tus productos</h3>
+          <p>Mirá el catálogo o pedime asesoramiento si no sabés por dónde empezar.</p>
+        </div>
+        <div class="paso">
+          <div class="num">2</div>
+          <h3>Me escribís por WhatsApp</h3>
+          <p>Completás el formulario de pedido y me llega tu mensaje directo.</p>
+        </div>
+        <div class="paso">
+          <div class="num">3</div>
+          <h3>Confirmamos y pagás</h3>
+          <p>Te paso el total con el envío y podés abonar por Mercado Pago o transferencia.</p>
+        </div>
+        <div class="paso">
+          <div class="num">4</div>
+          <h3>Lo recibís en tu casa</h3>
+          <p>Despachamos tu pedido y te llega a la dirección que nos indiques, en todo el país.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre-foto">Foto de Silvina<br>(reemplazar por foto real)</div>
+      <div>
+        <p class="eyebrow">Quién te asesora</p>
+        <h2 class="sec-title">Hola, soy Silvina</h2>
+        <p>Soy técnica en Bio Spa Facial y trabajo todos los días con la piel de mis clientas en cabina. Por eso no vendo "de catálogo": recomiendo lo que sé que funciona, según cada tipo de piel.</p>
+        <p>Elegí trabajar con Laboratorio Laca porque es cosmética argentina de calidad profesional, con líneas para todas las edades y necesidades, a precios accesibles.</p>
+        <p>Escribime sin compromiso: la primera consulta y el diagnóstico de piel son sin cargo.</p>
+        <a class="btn btn-primary" href="https://wa.me/549295412458?text=Hola%20Silvina%2C%20quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIDO -->
+  <section id="pedido" class="sobre">
+    <div class="wrap">
+      <p class="eyebrow">Pedidos</p>
+      <h2 class="sec-title" style="text-align:center;">Hacé tu pedido</h2>
+      <p class="sec-intro" style="text-align:center;margin-left:auto;margin-right:auto;">Completá tus datos y los productos que querés. Al enviar, se abre WhatsApp con el mensaje ya armado.</p>
+      <div class="pedido-card">
+        <div class="campo">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" placeholder="Ej: María González">
+        </div>
+        <div class="campo">
+          <label for="ciudad">Ciudad y provincia</label>
+          <input type="text" id="ciudad" placeholder="Ej: Santa Rosa, La Pampa">
+        </div>
+        <div class="campo">
+          <label for="direccion">Dirección de envío</label>
+          <input type="text" id="direccion" placeholder="Calle, número, piso/depto">
+        </div>
+        <div class="campo">
+          <label for="productos">Productos que querés</label>
+          <textarea id="productos" placeholder="Ej: Crema hidratante facial, protector solar FPS 50..."></textarea>
+        </div>
+        <button class="btn btn-primary" id="enviarPedido">Enviar pedido por WhatsApp</button>
+        <a class="mp-btn" href="#" id="mpLink">Pagar con Mercado Pago (link disponible al confirmar tu pedido)</a>
+        <p class="pedido-nota">Al confirmar el pedido te paso el total con el costo de envío incluido.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <span>© 2026 Silvina Beauty. Todos los derechos reservados.</span>
+      <span>Revendedora profesional independiente de productos Laboratorio Laca.</span>
+      <a href="https://wa.me/549295412458" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="disclaimer">Silvina Beauty es un emprendimiento independiente que comercializa productos de la marca Laboratorio Laca. No representa oficialmente a Laboratorio Laca S.A. ni está afiliado a su red oficial de puntos de venta. Los nombres y marcas de terceros mencionados pertenecen a sus respectivos dueños. Los productos cosméticos no reemplazan tratamientos médicos; ante cualquier afección de la piel, consultá a un profesional de la salud.</p>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/549295412458?text=Hola%20Silvina%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
+
+<script>
+  // Menú móvil
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Formulario de pedido -> WhatsApp
+  document.getElementById('enviarPedido').addEventListener('click', () => {
+    const nombre = document.getElementById('nombre').value.trim();
+    const ciudad = document.getElementById('ciudad').value.trim();
+    const direccion = document.getElementById('direccion').value.trim();
+    const productos = document.getElementById('productos').value.trim();
+    if(!nombre || !productos){
+      alert('Por favor completá al menos tu nombre y los productos que querés.');
+      return;
+    }
+    const msg = `Hola Silvina, quiero hacer un pedido:%0A%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Ciudad:* ${encodeURIComponent(ciudad)}%0A*Dirección:* ${encodeURIComponent(direccion)}%0A*Productos:*%0A${encodeURIComponent(productos)}`;
+    window.open(`https://wa.me/549295412458?text=${msg}`, '_blank');
+  });
+</script>
+
+</body>
+</html>

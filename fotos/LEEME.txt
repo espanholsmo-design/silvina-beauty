@@ -1,0 +1,572 @@
+GUIA DE FOTOS — Silvina Beauty
+==================================================
+
+Guarda las fotos dentro de esta carpeta (fotos/).
+El nombre de cada archivo debe coincidir EXACTAMENTE
+con los nombres de abajo.
+
+Formatos aceptados: .jpg  .jpeg  .png  .webp
+(el mismo nombre, distinta extension)
+
+Ejemplo: si el archivo dice
+  antiage-crema-retinol-con-vitamina-c.jpg
+guarda la foto con ese nombre exacto dentro de fotos/
+
+--------------------------------------------------
+CUIDADOS BÁSICOS
+--------------------------------------------------
+  Sérum Demaquillante de Ojos y Labios
+  -> cuidados-basicos-serum-demaquillante-de-ojos-y-labios.jpg
+
+  Sérum Demaquillante Protector
+  -> cuidados-basicos-serum-demaquillante-protector.jpg
+
+  Leche de Limpieza · con Fitoflavonas de Soja
+  -> cuidados-basicos-leche-de-limpieza-con-fitoflavonas-de-soja.jpg
+
+  Leche de Limpieza · con Regaliz y activos vegetales
+  -> cuidados-basicos-leche-de-limpieza-con-regaliz-y-activos-vegetales.jpg
+
+  Gel de Limpieza Protector
+  -> cuidados-basicos-gel-de-limpieza-protector.jpg
+
+  Crema de Limpieza · con Fitoesteroles de Soja y Malva
+  -> cuidados-basicos-crema-de-limpieza-con-fitoesteroles-de-soja-y-malva.jpg
+
+  Dermopulido Gel · con extractos frutales
+  -> cuidados-basicos-dermopulido-gel-con-extractos-frutales.jpg
+
+  Scrub Facial
+  -> cuidados-basicos-scrub-facial.jpg
+
+  Máscara Destello Vital
+  -> cuidados-basicos-mascara-destello-vital.jpg
+
+  Brume Radiant
+  -> cuidados-basicos-brume-radiant.jpg
+
+  Aire Libre · Repelente de insectos
+  -> cuidados-basicos-aire-libre-repelente-de-insectos.jpg
+
+--------------------------------------------------
+DERMOCOSMÉTICA DR. ENERO
+--------------------------------------------------
+  Monodosis Vitamina C Plus
+  -> dermocosmetica-dr-enero-monodosis-vitamina-c-plus.jpg
+
+  Monodosis Hialurón Plus
+  -> dermocosmetica-dr-enero-monodosis-hialuron-plus.jpg
+
+  Neodermis · Ampollas de Elastina
+  -> dermocosmetica-dr-enero-neodermis-ampollas-de-elastina.jpg
+
+  Piel Firm · Ampollas de Colágeno
+  -> dermocosmetica-dr-enero-piel-firm-ampollas-de-colageno.jpg
+
+  Monodosis C
+  -> dermocosmetica-dr-enero-monodosis-c.jpg
+
+  Monodosis R
+  -> dermocosmetica-dr-enero-monodosis-r.jpg
+
+  Monodosis D
+  -> dermocosmetica-dr-enero-monodosis-d.jpg
+
+  Colágeno III
+  -> dermocosmetica-dr-enero-colageno-iii.jpg
+
+  Hialurón
+  -> dermocosmetica-dr-enero-hialuron.jpg
+
+  Sérum con DMAE
+  -> dermocosmetica-dr-enero-serum-con-dmae.jpg
+
+  Restaurador Epidérmico
+  -> dermocosmetica-dr-enero-restaurador-epidermico.jpg
+
+  Sérum Ionizable · con Vitamina C
+  -> dermocosmetica-dr-enero-serum-ionizable-con-vitamina-c.jpg
+
+  Óleo Multivitamínico · con Rosa Mosqueta
+  -> dermocosmetica-dr-enero-oleo-multivitaminico-con-rosa-mosqueta.jpg
+
+  Gel Fortalecedor · con Biotina
+  -> dermocosmetica-dr-enero-gel-fortalecedor-con-biotina.jpg
+
+  Ablandador Enzimático
+  -> dermocosmetica-dr-enero-ablandador-enzimatico.jpg
+
+  Loción con Agentes Sanitizantes · de acción prolongada
+  -> dermocosmetica-dr-enero-locion-con-agentes-sanitizantes-de-accion-prolongada.jpg
+
+  Sérum Lifting Tensor
+  -> dermocosmetica-dr-enero-serum-lifting-tensor.jpg
+
+  Sérum Radiant Filler
+  -> dermocosmetica-dr-enero-serum-radiant-filler.jpg
+
+  Sérum Radiant Glow
+  -> dermocosmetica-dr-enero-serum-radiant-glow.jpg
+
+  Vital Booster · Hylu-Serum
+  -> dermocosmetica-dr-enero-vital-booster-hylu-serum.jpg
+
+  AZ Booster
+  -> dermocosmetica-dr-enero-az-booster.jpg
+
+  Serum Calmer
+  -> dermocosmetica-dr-enero-serum-calmer.jpg
+
+  Serum Novo Retinol
+  -> dermocosmetica-dr-enero-serum-novo-retinol.jpg
+
+--------------------------------------------------
+PIELES DELICADAS
+--------------------------------------------------
+  Sérum Humectante Herbal
+  -> pieles-delicadas-serum-humectante-herbal.jpg
+
+  Emulsión Humectante Herbal
+  -> pieles-delicadas-emulsion-humectante-herbal.jpg
+
+  Rocío Protector · con Oligoelementos
+  -> pieles-delicadas-rocio-protector-con-oligoelementos.jpg
+
+  Neblina Hidratante · con Malva y Bosswelia
+  -> pieles-delicadas-neblina-hidratante-con-malva-y-bosswelia.jpg
+
+  Emulsión Green Balance
+  -> pieles-delicadas-emulsion-green-balance.jpg
+
+  Máscara Descongestiva · con Silanotriol y Vitamina B3
+  -> pieles-delicadas-mascara-descongestiva-con-silanotriol-y-vitamina-b3.jpg
+
+  Gel Humectante Herbal
+  -> pieles-delicadas-gel-humectante-herbal.jpg
+
+  Brume Calmer
+  -> pieles-delicadas-brume-calmer.jpg
+
+--------------------------------------------------
+ANTIAGE
+--------------------------------------------------
+  Crema Células Madre · con Octapéptidos y Argán
+  -> antiage-crema-celulas-madre-con-octapeptidos-y-argan.jpg
+
+  Bálsamo Dinamizante Celular
+  -> antiage-balsamo-dinamizante-celular.jpg
+
+  Emulsión Células Madre
+  -> antiage-emulsion-celulas-madre.jpg
+
+  Crema · con Oxígeno
+  -> antiage-crema-con-oxigeno.jpg
+
+  Crema Liposomada · con Ácido Hialurónico
+  -> antiage-crema-liposomada-con-acido-hialuronico.jpg
+
+  Crema Retinol · con Vitamina C
+  -> antiage-crema-retinol-con-vitamina-c.jpg
+
+  Crema Retinol Plus
+  -> antiage-crema-retinol-plus.jpg
+
+  Crema Antiage Alimentar Nutrir
+  -> antiage-crema-antiage-alimentar-nutrir.jpg
+
+  Film Crono Hidratante
+  -> antiage-film-crono-hidratante.jpg
+
+  Crema Antiage · con Coenzima Q
+  -> antiage-crema-antiage-con-coenzima-q.jpg
+
+  Complejo Antiage · con Omega Plus
+  -> antiage-complejo-antiage-con-omega-plus.jpg
+
+  Biolifting XF
+  -> antiage-biolifting-xf.jpg
+
+  Gel Contorno de Ojos
+  -> antiage-gel-contorno-de-ojos.jpg
+
+  Secuencial Párpados · Día y Noche
+  -> antiage-secuencial-parpados-dia-y-noche.jpg
+
+  Fresh Eyes Roll On · con Cafeína
+  -> antiage-fresh-eyes-roll-on-con-cafeina.jpg
+
+  Microfiller Antiage
+  -> antiage-microfiller-antiage.jpg
+
+  Crema Nutritiva de Párpados
+  -> antiage-crema-nutritiva-de-parpados.jpg
+
+  Diamond Lips
+  -> antiage-diamond-lips.jpg
+
+  Diamond Eyes
+  -> antiage-diamond-eyes.jpg
+
+  Filler Diamond Antiage
+  -> antiage-filler-diamond-antiage.jpg
+
+  Cellular Diamond Antiage
+  -> antiage-cellular-diamond-antiage.jpg
+
+  Renova Defense
+  -> antiage-renova-defense.jpg
+
+  Bio Therapy · Hyalu-Serum
+  -> antiage-bio-therapy-hyalu-serum.jpg
+
+  Serum Liposomado · con Ácido Hialurónico
+  -> antiage-serum-liposomado-con-acido-hialuronico.jpg
+
+--------------------------------------------------
+HIDRATACIÓN
+--------------------------------------------------
+  Loción Humectante y Tonificante
+  -> hidratacion-locion-humectante-y-tonificante.jpg
+
+  Loción Refrescante · con Té verde y Flavonoides
+  -> hidratacion-locion-refrescante-con-te-verde-y-flavonoides.jpg
+
+  Emulsión Humectante Hidra Plus
+  -> hidratacion-emulsion-humectante-hidra-plus.jpg
+
+  Bruma Equilibrante
+  -> hidratacion-bruma-equilibrante.jpg
+
+  Crema Hidratante · con Urea +
+  -> hidratacion-crema-hidratante-con-urea.jpg
+
+  Crema Humectante · con Aceite de Palta
+  -> hidratacion-crema-humectante-con-aceite-de-palta.jpg
+
+  Crema Color · con Ácido Hialurónico
+  -> hidratacion-crema-color-con-acido-hialuronico.jpg
+
+  Hidrogel · con Uniesferas de Vitaminas C y E
+  -> hidratacion-hidrogel-con-uniesferas-de-vitaminas-c-y-e.jpg
+
+  Crema Humectante · con Aloe Vera
+  -> hidratacion-crema-humectante-con-aloe-vera.jpg
+
+  Sérum Facial · con Ramnosa
+  -> hidratacion-serum-facial-con-ramnosa.jpg
+
+  Concentrado Hidroenergizante ACI
+  -> hidratacion-concentrado-hidroenergizante-aci.jpg
+
+  Máscara Radiant Filler
+  -> hidratacion-mascara-radiant-filler.jpg
+
+--------------------------------------------------
+PIELES GRASAS
+--------------------------------------------------
+  Lápiz Secativo · con Tea Tree Oil
+  -> pieles-grasas-lapiz-secativo-con-tea-tree-oil.jpg
+
+  Lápiz Secativo Incoloro
+  -> pieles-grasas-lapiz-secativo-incoloro.jpg
+
+  Lápiz Secativo Color
+  -> pieles-grasas-lapiz-secativo-color.jpg
+
+  Crema Control Sebo
+  -> pieles-grasas-crema-control-sebo.jpg
+
+  Perfect Pore
+  -> pieles-grasas-perfect-pore.jpg
+
+  Loción Secante
+  -> pieles-grasas-locion-secante.jpg
+
+  Loción Astringente
+  -> pieles-grasas-locion-astringente.jpg
+
+  Loción Astringente · con Nicotinamida
+  -> pieles-grasas-locion-astringente-con-nicotinamida.jpg
+
+  Emulsión Aqua Pore
+  -> pieles-grasas-emulsion-aqua-pore.jpg
+
+  Máscara Secativa y Reguladora
+  -> pieles-grasas-mascara-secativa-y-reguladora.jpg
+
+  Loción Antibacterial · sin acción terapéutica
+  -> pieles-grasas-locion-antibacterial-sin-accion-terapeutica.jpg
+
+  Acné III
+  -> pieles-grasas-acne-iii.jpg
+
+  Loción Perfect Pore · con Ácido Salicílico
+  -> pieles-grasas-locion-perfect-pore-con-acido-salicilico.jpg
+
+--------------------------------------------------
+RENOVACIÓN CELULAR
+--------------------------------------------------
+  Dermoaclarante
+  -> renovacion-celular-dermoaclarante.jpg
+
+  Loción Glico 40
+  -> renovacion-celular-locion-glico-40.jpg
+
+  Gel Plus · con Ácido Mandélico y Uva Ursi
+  -> renovacion-celular-gel-plus-con-acido-mandelico-y-uva-ursi.jpg
+
+  Renovador Celular α+β
+  -> renovacion-celular-renovador-celular.jpg
+
+  Peeling Bio Enzimático
+  -> renovacion-celular-peeling-bio-enzimatico.jpg
+
+  Crema Renovadora · con Ácido Salicílico
+  -> renovacion-celular-crema-renovadora-con-acido-salicilico.jpg
+
+  Glico 20
+  -> renovacion-celular-glico-20.jpg
+
+  Gel · con Aha's
+  -> renovacion-celular-gel-con-aha-s.jpg
+
+  Gel con Ácido Lactobiónico
+  -> renovacion-celular-gel-con-acido-lactobionico.jpg
+
+  Gel con Ácido Tranexámico y Pantenol
+  -> renovacion-celular-gel-con-acido-tranexamico-y-pantenol.jpg
+
+  Sérum Ácido Mandélico
+  -> renovacion-celular-serum-acido-mandelico.jpg
+
+  Sérum Ácido Salicílico
+  -> renovacion-celular-serum-acido-salicilico.jpg
+
+--------------------------------------------------
+CORPORALES
+--------------------------------------------------
+  Emulsión Reafirmante Corporal · con Coenzima Q
+  -> corporales-emulsion-reafirmante-corporal-con-coenzima-q.jpg
+
+  Leche Corporal · con Vitamina A
+  -> corporales-leche-corporal-con-vitamina-a.jpg
+
+  Gel Modelador Intensivo
+  -> corporales-gel-modelador-intensivo.jpg
+
+  Shower Gel · con Proteínas y Extractos Vegetales
+  -> corporales-shower-gel-con-proteinas-y-extractos-vegetales.jpg
+
+  Solución Corporal · con DMAE
+  -> corporales-solucion-corporal-con-dmae.jpg
+
+  Termogel · con Mix Vegetal y Silicio Orgánico
+  -> corporales-termogel-con-mix-vegetal-y-silicio-organico.jpg
+
+  Bruma Integral · con Cafeína y Árnica
+  -> corporales-bruma-integral-con-cafeina-y-arnica.jpg
+
+  Emulsión Corporal Multitratamiento
+  -> corporales-emulsion-corporal-multitratamiento.jpg
+
+  Crema Ultra Relajante
+  -> corporales-crema-ultra-relajante.jpg
+
+  Crema Corporal · con Chocolate y Fosfatidilcolina
+  -> corporales-crema-corporal-con-chocolate-y-fosfatidilcolina.jpg
+
+  Crema Corporal Multitratamiento · formato gabinete
+  -> corporales-crema-corporal-multitratamiento-formato-gabinete.jpg
+
+  Scrub Corporal Activo
+  -> corporales-scrub-corporal-activo.jpg
+
+  Criogel Reafirmante
+  -> corporales-criogel-reafirmante.jpg
+
+  Vital Body Emulsion
+  -> corporales-vital-body-emulsion.jpg
+
+  Óleo Corporal Dual
+  -> corporales-oleo-corporal-dual.jpg
+
+  Crema Celulitis III
+  -> corporales-crema-celulitis-iii.jpg
+
+--------------------------------------------------
+PROTECCIÓN SOLAR
+--------------------------------------------------
+  Emulsión Protectora FPS 60 · con Color
+  -> proteccion-solar-emulsion-protectora-fps-60-con-color.jpg
+
+  Bálsamo Protector de Labios
+  -> proteccion-solar-balsamo-protector-de-labios.jpg
+
+  Bálsamo Protector de Labios Cherry
+  -> proteccion-solar-balsamo-protector-de-labios-cherry.jpg
+
+  Crema Humectante y Protectora · para Piel Sensible
+  -> proteccion-solar-crema-humectante-y-protectora-para-piel-sensible.jpg
+
+  Filtro Solar Invisible FPS 30
+  -> proteccion-solar-filtro-solar-invisible-fps-30.jpg
+
+  Filtro Solar Invisible FPS 50
+  -> proteccion-solar-filtro-solar-invisible-fps-50.jpg
+
+  Autobronceante Activador
+  -> proteccion-solar-autobronceante-activador.jpg
+
+  Spray Post Solar
+  -> proteccion-solar-spray-post-solar.jpg
+
+  Emulsión Protectora FPS 34
+  -> proteccion-solar-emulsion-protectora-fps-34.jpg
+
+  Emulsión Protectora FPS 21
+  -> proteccion-solar-emulsion-protectora-fps-21.jpg
+
+  Ultra Fluido FPS 60
+  -> proteccion-solar-ultra-fluido-fps-60.jpg
+
+--------------------------------------------------
+CAPILARES
+--------------------------------------------------
+  Bioactivador Capilar
+  -> capilares-bioactivador-capilar.jpg
+
+  Ampollas Control Caída
+  -> capilares-ampollas-control-caida.jpg
+
+  Shampoo Biocauterizante
+  -> capilares-shampoo-biocauterizante.jpg
+
+  Shampoo Sebonormalizante · con Tea Tree Oil
+  -> capilares-shampoo-sebonormalizante-con-tea-tree-oil.jpg
+
+  Shampoo para la Caída
+  -> capilares-shampoo-para-la-caida.jpg
+
+  Shampoo Antiage
+  -> capilares-shampoo-antiage.jpg
+
+--------------------------------------------------
+MANOS Y PIES
+--------------------------------------------------
+  Crema Antiage para Manos · con Vitaminas
+  -> manos-y-pies-crema-antiage-para-manos-con-vitaminas.jpg
+
+  Crema para Manos · con Ácido Hialurónico
+  -> manos-y-pies-crema-para-manos-con-acido-hialuronico.jpg
+
+  Crema Deportiva y Restauradora para Pies
+  -> manos-y-pies-crema-deportiva-y-restauradora-para-pies.jpg
+
+  Crema Hidratante Perfumada F3
+  -> manos-y-pies-crema-hidratante-perfumada-f3.jpg
+
+  Ablandador Pédico
+  -> manos-y-pies-ablandador-pedico.jpg
+
+--------------------------------------------------
+CUIDADOS MASCULINOS
+--------------------------------------------------
+  Bálsamo After Shave
+  -> cuidados-masculinos-balsamo-after-shave.jpg
+
+  Emulsión Energía Vital
+  -> cuidados-masculinos-emulsion-energia-vital.jpg
+
+  Sérum Reparador Antiage
+  -> cuidados-masculinos-serum-reparador-antiage.jpg
+
+--------------------------------------------------
+SENSORIAL
+--------------------------------------------------
+  Emulsión Hidratante Enigmática · Mango y Miel
+  -> sensorial-emulsion-hidratante-enigmatica-mango-y-miel.jpg
+
+  Emulsión Hidratante Ilusión · Frutos del Bosque Patagónico
+  -> sensorial-emulsion-hidratante-ilusion-frutos-del-bosque-patagonico.jpg
+
+  Emulsión Hidratante Salvaje · fragancia frutal
+  -> sensorial-emulsion-hidratante-salvaje-fragancia-frutal.jpg
+
+  Emulsión Hidratante Fresca · lilas, gardenias y vainilla
+  -> sensorial-emulsion-hidratante-fresca-lilas-gardenias-y-vainilla.jpg
+
+  Body Splash Vainilla de Tahití
+  -> sensorial-body-splash-vainilla-de-tahiti.jpg
+
+  Body Splash Azúcar de Coco
+  -> sensorial-body-splash-azucar-de-coco.jpg
+
+  Body Splash Flor de Tiare
+  -> sensorial-body-splash-flor-de-tiare.jpg
+
+  Aceite Esencial Eucalipto
+  -> sensorial-aceite-esencial-eucalipto.jpg
+
+  Aceite Esencial Tea Tree
+  -> sensorial-aceite-esencial-tea-tree.jpg
+
+  Aceite Esencial Lavanda
+  -> sensorial-aceite-esencial-lavanda.jpg
+
+  Aceite Esencial Romero
+  -> sensorial-aceite-esencial-romero.jpg
+
+  Aceite Esencial Sumun 31
+  -> sensorial-aceite-esencial-sumun-31.jpg
+
+--------------------------------------------------
+FRAGANCIAS
+--------------------------------------------------
+  Fragancia Femenina 1 · F1
+  -> fragancias-fragancia-femenina-1-f1.jpg
+
+  Fragancia Femenina 2 · F2
+  -> fragancias-fragancia-femenina-2-f2.jpg
+
+  Fragancia Femenina 3 · F3
+  -> fragancias-fragancia-femenina-3-f3.jpg
+
+  Fragancia Masculina 1 · M1
+  -> fragancias-fragancia-masculina-1-m1.jpg
+
+  Fragancia Masculina 2 · M2
+  -> fragancias-fragancia-masculina-2-m2.jpg
+
+--------------------------------------------------
+TEENS
+--------------------------------------------------
+  My Cleaner Gel Exfoliante
+  -> teens-my-cleaner-gel-exfoliante.jpg
+
+  Stop Estrías Emulgel
+  -> teens-stop-estrias-emulgel.jpg
+
+  Loción Matificante
+  -> teens-locion-matificante.jpg
+
+--------------------------------------------------
+LACA BEAUTY
+--------------------------------------------------
+  Crema Light
+  -> laca-beauty-crema-light.jpg
+
+  Sérum Cremoso
+  -> laca-beauty-serum-cremoso.jpg
+
+  Mousse de Día
+  -> laca-beauty-mousse-de-dia.jpg
+
+  Agua Facial
+  -> laca-beauty-agua-facial.jpg
+
+  Leche Corporal
+  -> laca-beauty-leche-corporal.jpg
+
+==================================================
+Si tienes dudas, sube las fotos y el sistema
+buscara el nombre correcto automaticamente.

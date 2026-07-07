@@ -171,6 +171,14 @@
     flex-direction:column;
     gap:8px;
   }
+  .card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border:1px solid #ece7d9;
+    border-radius:2px;
+    background:#f4f1ea;
+  }
   .card.pro{
     border-color:#dcc3ba;
     background:#fdf9f7;
@@ -332,8 +340,10 @@
       filtrados.forEach(p => {
         const card = document.createElement('div');
         card.className = 'card' + (p.pro ? ' pro' : '');
+        const foto = `https://placehold.co/640x480/f7f4ee/5c5645?text=${encodeURIComponent(p.n)}`;
         card.innerHTML = `
           <span class="badge ${p.pro ? 'pro' : 'casa'}">${p.pro ? 'Solo gabinete' : 'Uso en casa'}</span>
+          <img src="${foto}" alt="${p.n}" loading="lazy">
           <div class="cat-label">${p.c}</div>
           <h3>${p.n}</h3>
           ${p.s ? `<div class="sline">${p.s}</div>` : ''}

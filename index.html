@@ -151,8 +151,10 @@
   .pedido-nota{font-size:.82rem;color:var(--gris);margin-top:14px;text-align:center;}
   .mp-btn{
     display:block;text-align:center;margin-top:12px;padding:13px 28px;border-radius:100px;
-    background:var(--hueso-2);color:var(--gris);text-decoration:none;font-size:.9rem;letter-spacing:.04em;
+    background:#fff;border:1.5px solid #009EE3;color:#009EE3;text-decoration:none;
+    font-size:.92rem;letter-spacing:.04em;font-weight:500;transition:background .15s,color .15s;
   }
+  .mp-btn:hover{background:#009EE3;color:#fff;}
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--carbon);color:var(--hueso);padding:44px 0 30px;font-size:.85rem;}
@@ -340,8 +342,8 @@
           <textarea id="productos" placeholder="Ej: Crema hidratante facial, protector solar FPS 50..."></textarea>
         </div>
         <button class="btn btn-primary" id="enviarPedido">Enviar pedido por WhatsApp</button>
-        <a class="mp-btn" href="#" id="mpLink">Pagar con Mercado Pago (link disponible al confirmar tu pedido)</a>
-        <p class="pedido-nota">Al confirmar el pedido te paso el total con el costo de envío incluido.</p>
+        <a class="mp-btn" href="https://mpago.la/2mvdheU" target="_blank" rel="noopener">💳 Pagar con Mercado Pago</a>
+        <p class="pedido-nota">Al confirmar tu pedido por WhatsApp te paso el total con el envío incluido. Después pagás ese monto con el botón de Mercado Pago o por transferencia.</p>
       </div>
     </div>
   </section>

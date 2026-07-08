@@ -171,17 +171,22 @@
     flex-direction:column;
     gap:8px;
   }
-  .card img{
-    width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
-    border:1px solid #ece7d9;
-    border-radius:2px;
-    background:#f4f1ea;
-  }
   .card.pro{
     border-color:#dcc3ba;
     background:#fdf9f7;
+  }
+  .card .foto{
+    height:170px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:6px 0 4px;
+  }
+  .card .foto img{
+    max-height:100%;
+    max-width:70%;
+    object-fit:contain;
+    filter:drop-shadow(0 8px 14px rgba(44,44,40,.14));
   }
   .badge{
     position:absolute;
@@ -289,44 +294,6 @@
   let catActiva = 'todas';
   let query = '';
 
-  function slugify(texto){
-    return texto
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-  }
-
-  function getProductPhotoCandidates(producto){
-    const base = slugify([producto.c, producto.n, producto.s || ''].filter(Boolean).join('-'));
-    return [
-      `fotos/${base}.jpg`,
-      `fotos/${base}.jpeg`,
-      `fotos/${base}.png`,
-      `fotos/${base}.webp`,
-      `https://placehold.co/640x480/f7f4ee/5c5645?text=${encodeURIComponent(producto.n)}`
-    ];
-  }
-
-  function createProductImage(producto){
-    const img = document.createElement('img');
-    const candidates = getProductPhotoCandidates(producto);
-    let index = 0;
-
-    img.alt = producto.n;
-    img.loading = 'lazy';
-    img.src = candidates[index];
-    img.addEventListener('error', () => {
-      if(index < candidates.length - 1){
-        index += 1;
-        img.src = candidates[index];
-      }
-    });
-
-    return img;
-  }
-
   // Build category chips
   const categorias = ['todas', ...new Set(PRODUCTOS.map(p => p.c))];
   categorias.forEach(cat => {
@@ -380,6 +347,7 @@
         card.className = 'card' + (p.pro ? ' pro' : '');
         card.innerHTML = `
           <span class="badge ${p.pro ? 'pro' : 'casa'}">${p.pro ? 'Solo gabinete' : 'Uso en casa'}</span>
+          ${p.img ? `<div class="foto"><img src="${p.img}" alt="${p.n}" loading="lazy"></div>` : ''}
           <div class="cat-label">${p.c}</div>
           <h3>${p.n}</h3>
           ${p.s ? `<div class="sline">${p.s}</div>` : ''}
@@ -389,7 +357,6 @@
             <div><b>Presentación:</b> ${p.p}</div>
           </div>
         `;
-        card.insertBefore(createProductImage(p), card.children[1]);
         grid.appendChild(card);
       });
     }

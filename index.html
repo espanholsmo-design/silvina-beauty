@@ -276,7 +276,7 @@
 <body>
 
 <header>
-  <div class="eyebrow">Silvina Beauty · Reseller oficial LACA</div>
+  <div class="eyebrow">Silvina Beauty · Revendedora oficial LACA</div>
   <h1>Catálogo LACA</h1>
   <p class="sub">Cosmética profesional de Laboratorio LACA. Buscá tu producto, mirá el precio y pedilo por WhatsApp. Enviamos a todo el país.</p>
 </header>
@@ -300,7 +300,7 @@
   <div class="empty" id="empty" style="display:none;">No se encontraron productos con esos filtros.</div>
 </main>
 
-<footer>Silvina Beauty · Reseller oficial Laboratorio LACA · Santa Rosa, La Pampa · Envíos a todo el país<br>Lista de precios julio 2026 — pueden variar sin previo aviso</footer>
+<footer>Silvina Beauty · Revendedora oficial Laboratorio LACA · Santa Rosa, La Pampa · Envíos a todo el país<br>Lista de precios julio 2026 — pueden variar sin previo aviso</footer>
 
 <script src="productos.js"></script>
 <script>
@@ -390,7 +390,7 @@
           </div>
           <div class="precio-row">
             ${p.precio
-              ? `<div class="precio">$${p.precio.toLocaleString('es-AR')}</div><a class="btn-wa" href="${linkPedido(p)}" target="_blank" rel="noopener">Pedir por WhatsApp</a>`
+              ? `<div class="precio">$${p.precio.toLocaleString('es-AR')}${p.nota ? ` <small>${p.nota}</small>` : ''}</div><a class="btn-wa" href="${linkPedido(p)}" target="_blank" rel="noopener">Pedir por WhatsApp</a>`
               : `<div class="precio"><small>Precio a consultar</small></div><a class="btn-wa consulta" href="${linkConsulta(p)}" target="_blank" rel="noopener">Consultar</a>`}
           </div>
         `;

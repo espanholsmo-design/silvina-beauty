@@ -3,592 +3,609 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silvina Beauty — Catálogo LACA con precios</title>
+<title>Silvina Beauty · Cosmética LACA con envío a todo el país</title>
+<meta name="description" content="Revendedora oficial de Laboratorio LACA. Más de 180 productos para tu piel con precio de lista, asesoramiento personalizado por WhatsApp y envío gratis desde $70.000.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Silvina Beauty · Cosmética LACA">
+<meta property="og:description" content="Armá tu pedido, recibí asesoramiento por WhatsApp y pagá con Mercado Pago. Envío gratis desde $70.000.">
+<meta property="og:image" content="https://espanholsmo-design.github.io/silvina-beauty/fotos/vital-body-emulsion.webp">
+<meta property="og:url" content="https://espanholsmo-design.github.io/silvina-beauty/">
+<meta name="theme-color" content="#1f3d2e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231f3d2e'/><text x='32' y='44' font-size='34' text-anchor='middle' fill='%23c9a66b' font-family='Georgia'>S</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --verde:#1f3d2e;
-    --verde-deep:#152a20;
-    --dorado:#c9a66b;
-    --hueso:#f7f4ee;
-    --carbon:#2a2823;
-    --linea:#dcd4c2;
-    --rosa-pro:#9c5b4a;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{
-    font-family:'Outfit', sans-serif;
-    background:var(--hueso);
-    color:var(--carbon);
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3, .display{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:500;
-    letter-spacing:0.01em;
-  }
+:root{--verde:#1f3d2e;--verde-deep:#152a20;--dorado:#c9a66b;--hueso:#f7f4ee;--carbon:#2a2823;--linea:#dcd4c2;--rosa:#9c5b4a;--wa:#1f9d55;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--hueso);color:var(--carbon);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dorado);font-weight:500;margin-bottom:12px}
 
-  /* HEADER */
-  header{
-    background:var(--verde);
-    color:var(--hueso);
-    padding:48px 20px 40px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  header::after{
-    content:"";
-    position:absolute; left:0; right:0; bottom:0;
-    height:1px;
-    background:linear-gradient(90deg, transparent, var(--dorado), transparent);
-  }
-  .eyebrow{
-    font-size:11px;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--dorado);
-    margin-bottom:14px;
-  }
-  header h1{
-    font-size:clamp(32px, 7vw, 52px);
-    line-height:1.05;
-    margin-bottom:10px;
-  }
-  header p.sub{
-    font-size:14px;
-    color:#d9d3c0;
-    max-width:520px;
-    margin:0 auto;
-    line-height:1.5;
-  }
+/* Barra superior */
+.aviso{background:var(--dorado);color:var(--verde-deep);text-align:center;font-size:12.5px;font-weight:500;padding:8px 12px;letter-spacing:.02em}
+nav.top{position:sticky;top:0;z-index:40;background:var(--verde-deep);color:var(--hueso)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.marca{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;text-decoration:none}
+.marca span{color:var(--dorado)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{font-size:13px;color:#cfc9b6;text-decoration:none}
+.nav-links a:hover{color:var(--dorado)}
+.btn-carrito{position:relative;display:flex;align-items:center;gap:8px;background:var(--dorado);color:var(--verde-deep);border:none;border-radius:30px;padding:9px 16px;font-size:13.5px;font-weight:600}
+.btn-carrito .num{background:var(--verde-deep);color:var(--hueso);border-radius:20px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;padding:0 6px}
+.btn-carrito.salto{animation:salto .45s}
+@keyframes salto{40%{transform:scale(1.12)}}
+@media(max-width:700px){.nav-links a{display:none}}
 
-  /* CONTROLS */
-  .controls{
-    position:sticky; top:0; z-index:20;
-    background:var(--hueso);
-    border-bottom:1px solid var(--linea);
-    padding:14px 16px;
-  }
-  .search-row{
-    display:flex; gap:8px; margin-bottom:12px;
-  }
-  .search-row input{
-    flex:1;
-    font-family:'Outfit', sans-serif;
-    font-size:15px;
-    padding:11px 14px;
-    border:1px solid var(--linea);
-    border-radius:2px;
-    background:#fff;
-    color:var(--carbon);
-  }
-  .search-row input:focus{ outline:1px solid var(--verde); border-color:var(--verde); }
+/* Hero */
+.hero{background:var(--verde);color:var(--hueso);padding:52px 0 44px;text-align:center}
+.hero h1{font-size:clamp(36px,8vw,60px);line-height:1.04;margin-bottom:16px}
+.hero h1 em{color:var(--dorado);font-style:italic}
+.hero p.lead{font-size:16px;color:#dcd6c4;max-width:560px;margin:0 auto 26px;line-height:1.6}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:500;padding:15px 26px;border-radius:40px;text-decoration:none;border:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-oro{background:var(--dorado);color:var(--verde-deep)}
+.btn-borde{border:1px solid rgba(247,244,238,.5);color:var(--hueso);background:transparent}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-verde{background:var(--verde);color:var(--hueso)}
 
-  .usage-toggle{
-    display:flex;
-    border:1px solid var(--verde);
-    border-radius:2px;
-    overflow:hidden;
-    margin-bottom:12px;
-  }
-  .usage-toggle button{
-    flex:1;
-    font-family:'Outfit', sans-serif;
-    font-size:12.5px;
-    letter-spacing:0.03em;
-    padding:10px 6px;
-    background:#fff;
-    color:var(--verde);
-    border:none;
-    cursor:pointer;
-    border-right:1px solid var(--verde);
-    transition:background .15s;
-  }
-  .usage-toggle button:last-child{ border-right:none; }
-  .usage-toggle button.active{
-    background:var(--verde);
-    color:var(--hueso);
-  }
+.confianza{background:#fff;border-bottom:1px solid var(--linea)}
+.confianza .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:18px 16px}
+.conf{display:flex;gap:10px;align-items:center;font-size:12.5px;line-height:1.35;color:#4a4638}
+.conf .ico{flex:0 0 38px;height:38px;border-radius:50%;background:#eef1ea;display:flex;align-items:center;justify-content:center;font-size:18px}
+.conf b{display:block;color:var(--verde-deep);font-size:13.5px}
+@media(max-width:760px){.confianza .wrap{grid-template-columns:1fr 1fr;gap:14px}}
 
-  .cat-scroll{
-    display:flex;
-    gap:8px;
-    overflow-x:auto;
-    padding-bottom:2px;
-    scrollbar-width:none;
-  }
-  .cat-scroll::-webkit-scrollbar{ display:none; }
-  .cat-chip{
-    flex:0 0 auto;
-    font-family:'Outfit', sans-serif;
-    font-size:12.5px;
-    padding:8px 14px;
-    border:1px solid var(--linea);
-    border-radius:20px;
-    background:#fff;
-    color:var(--carbon);
-    cursor:pointer;
-    white-space:nowrap;
-  }
-  .cat-chip.active{
-    background:var(--dorado);
-    border-color:var(--dorado);
-    color:var(--verde-deep);
-    font-weight:500;
-  }
+section{padding:52px 0}
+.sec-head{text-align:center;margin-bottom:28px}
+.sec-head h2{font-size:clamp(28px,6vw,40px);color:var(--verde-deep);line-height:1.1}
+.sec-head p{font-size:14.5px;color:#6b6553;max-width:560px;margin:10px auto 0;line-height:1.55}
 
-  .count-bar{
-    padding:14px 16px 4px;
-    font-size:12px;
-    color:#7a7462;
-    letter-spacing:0.02em;
-  }
+/* Aniversario */
+.aniv{background:linear-gradient(135deg,#f3e6d3,#f7f4ee);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:40px 0}
+.aniv .wrap{display:flex;align-items:center;gap:28px;justify-content:center;flex-wrap:wrap;text-align:left}
+.aniv .num70{font-family:'Cormorant Garamond',serif;font-size:88px;line-height:.9;color:var(--rosa);font-weight:600}
+.aniv h2{font-size:30px;color:var(--verde-deep);line-height:1.1}
+.aniv p{font-size:14.5px;color:#4a4638;max-width:430px;margin:8px 0 14px;line-height:1.55}
 
-  /* PRODUCT GRID */
-  main{ padding:8px 16px 60px; }
-  .grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:14px;
-    margin-top:10px;
-  }
-  @media (min-width:640px){
-    .grid{ grid-template-columns:1fr 1fr; }
-  }
-  @media (min-width:980px){
-    .grid{ grid-template-columns:1fr 1fr 1fr; }
-  }
+/* Grilla productos */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:1040px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border:1px solid var(--linea);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;position:relative;transition:box-shadow .2s}
+.card:hover{box-shadow:0 10px 28px rgba(31,61,46,.10)}
+.card.resaltado{outline:2px solid var(--dorado);outline-offset:2px}
+.card .foto{aspect-ratio:1/1;background:#faf8f3;display:flex;align-items:center;justify-content:center;padding:14px;cursor:pointer}
+.card .foto img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(44,44,40,.13))}
+.card .sinfoto{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--dorado);opacity:.55}
+.badge{position:absolute;top:10px;left:10px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:20px;font-weight:600}
+.badge.pro{background:var(--rosa);color:#fff}
+.badge.top{background:var(--dorado);color:var(--verde-deep)}
+.card .info{padding:12px 13px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card .cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dorado);font-weight:600}
+.card h3{font-size:18.5px;line-height:1.12;color:var(--verde-deep);cursor:pointer}
+.card .s{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14.5px;color:#6b6553;line-height:1.2}
+.card .ben{font-size:12.5px;line-height:1.45;color:#5a5646;margin-top:2px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .pres{font-size:11.5px;color:#8a8471}
+.card .pie{margin-top:auto;padding-top:10px;display:flex;flex-direction:column;gap:8px}
+.precio{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--verde-deep);line-height:1}
+.precio small{font-family:'Outfit',sans-serif;font-size:11px;color:#8a8471;font-weight:400}
+.cuotas{font-size:11px;color:var(--wa);font-weight:500}
+.btn-add{width:100%;border:none;border-radius:30px;background:var(--verde);color:var(--hueso);font-size:13px;font-weight:500;padding:11px 8px;transition:background .15s}
+.btn-add:hover{background:var(--verde-deep)}
+.btn-add.ok{background:var(--wa)}
+.btn-add.consulta{background:#fff;color:var(--verde);border:1px solid var(--verde)}
+@media(max-width:420px){.card h3{font-size:16.5px}.precio{font-size:21px}.card .ben{display:none}}
 
-  .card{
-    background:#fff;
-    border:1px solid var(--linea);
-    border-radius:3px;
-    padding:18px 18px 16px;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
-  .card.pro{
-    border-color:#dcc3ba;
-    background:#fdf9f7;
-  }
-  .card .foto{
-    height:170px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:6px 0 4px;
-  }
-  .card .foto img{
-    max-height:100%;
-    max-width:70%;
-    object-fit:contain;
-    filter:drop-shadow(0 8px 14px rgba(44,44,40,.14));
-  }
-  .badge{
-    position:absolute;
-    top:14px; right:14px;
-    font-size:9.5px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    padding:4px 8px;
-    border-radius:20px;
-    font-weight:500;
-  }
-  .badge.casa{ background:#e7ede6; color:var(--verde); }
-  .badge.pro{ background:var(--rosa-pro); color:#fff; }
+/* Catálogo controles */
+#catalogo{padding-top:44px}
+.controles{position:sticky;top:58px;z-index:30;background:var(--hueso);padding:12px 0;border-bottom:1px solid var(--linea);margin-bottom:12px}
+.fila{display:flex;gap:8px;margin-bottom:10px}
+.fila input,.fila select{font-family:inherit;font-size:15px;padding:11px 14px;border:1px solid var(--linea);border-radius:30px;background:#fff;color:var(--carbon)}
+.fila input{flex:1;min-width:0}
+.fila select{flex:0 0 auto;max-width:44%}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font-size:12.5px;padding:8px 14px;border:1px solid var(--linea);border-radius:20px;background:#fff;color:var(--carbon);white-space:nowrap}
+.chip.on{background:var(--verde);border-color:var(--verde);color:var(--hueso)}
+.contador{font-size:12px;color:#7a7462;margin:6px 0 12px}
+.vacio{text-align:center;padding:50px 20px;color:#7a7462;font-size:14.5px;line-height:1.6}
+.mas{display:block;margin:24px auto 0}
 
-  .card .cat-label{
-    font-size:10.5px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--dorado);
-    font-weight:500;
-  }
-  .card h3{
-    font-size:21px;
-    line-height:1.15;
-    padding-right:70px;
-    color:var(--verde-deep);
-  }
-  .card .sline{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:15px;
-    color:#6b6553;
-    margin-top:-6px;
-  }
-  .card .benefit{
-    font-size:13.5px;
-    line-height:1.5;
-    color:#4a4638;
-  }
-  .card .meta{
-    margin-top:auto;
-    padding-top:10px;
-    border-top:1px solid #ece7d9;
-    font-size:11.5px;
-    color:#8a8471;
-    line-height:1.6;
-  }
-  .card .meta b{ color:#5c5645; font-weight:500; }
+/* Cómo comprar */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.pasos{grid-template-columns:1fr}}
+.paso{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:22px}
+.paso .n{width:34px;height:34px;border-radius:50%;background:var(--dorado);color:var(--verde-deep);font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.paso h3{font-size:22px;color:var(--verde-deep);margin-bottom:6px}
+.paso p{font-size:14px;line-height:1.55;color:#4a4638}
 
-  .precio-row{
-    display:flex; align-items:center; justify-content:space-between;
-    gap:10px; margin-top:4px;
-  }
-  .precio{
-    font-family:'Cormorant Garamond', serif;
-    font-size:24px; font-weight:600;
-    color:var(--verde-deep);
-  }
-  .precio small{ font-size:12px; color:#8a8471; font-family:'Outfit',sans-serif; font-weight:400; }
-  .btn-wa{
-    font-family:'Outfit', sans-serif;
-    font-size:12.5px; font-weight:500; letter-spacing:0.03em;
-    padding:9px 14px; border-radius:2px;
-    background:var(--verde); color:var(--hueso);
-    text-decoration:none; white-space:nowrap;
-    transition:background .15s;
-  }
-  .btn-wa:hover{ background:var(--verde-deep); }
-  .btn-wa.consulta{ background:#fff; color:var(--verde); border:1px solid var(--verde); }
+/* Sobre mí */
+.sobre{background:var(--verde);color:var(--hueso)}
+.sobre .wrap{max-width:760px;text-align:center}
+.sobre h2{font-size:clamp(28px,6vw,40px);margin-bottom:14px}
+.sobre p{font-size:15.5px;line-height:1.7;color:#dcd6c4;margin-bottom:22px}
 
-  .empty{
-    text-align:center;
-    padding:60px 20px;
-    color:#8a8471;
-    font-size:14px;
-  }
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--linea);border-radius:10px;margin-bottom:10px;padding:0 18px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:500;font-size:15px;color:var(--verde-deep);display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--dorado);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14px;line-height:1.6;color:#4a4638;padding-bottom:16px}
 
-  footer{
-    text-align:center;
-    padding:30px 20px 50px;
-    font-size:11.5px;
-    color:#9a947f;
-    letter-spacing:0.03em;
-  }
+footer{background:var(--verde-deep);color:#a9a38f;text-align:center;font-size:12px;line-height:1.8;padding:30px 16px 100px}
+footer a{color:var(--dorado)}
 
-  /* NAV */
-  nav.topnav{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 20px;
-    background:var(--verde-deep);
-  }
-  nav.topnav .marca{
-    font-family:'Cormorant Garamond', serif;
-    font-size:19px; font-weight:600;
-    color:var(--hueso);
-    letter-spacing:0.01em;
-  }
-  nav.topnav .marca span{ color:var(--dorado); }
-  nav.topnav .links{ display:flex; gap:18px; }
-  nav.topnav a{
-    font-family:'Outfit', sans-serif;
-    font-size:12px; letter-spacing:0.04em;
-    color:#cfc9b6;
-    text-decoration:none;
-    white-space:nowrap;
-  }
-  nav.topnav a:hover{ color:var(--dorado); }
+/* WhatsApp flotante */
+.wa-float{position:fixed;right:16px;bottom:18px;z-index:45;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
 
-  /* HERO / PORTADA */
-  .hero{
-    background:var(--verde);
-    color:var(--hueso);
-    padding:56px 20px 44px;
-    text-align:center;
-    position:relative;
-  }
-  .hero-eyebrow{
-    font-size:11px;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--dorado);
-    margin-bottom:16px;
-  }
-  .hero h1{
-    font-size:clamp(36px, 8vw, 58px);
-    line-height:1.05;
-    margin-bottom:16px;
-  }
-  .hero p.lead{
-    font-size:15.5px;
-    color:#d9d3c0;
-    max-width:540px;
-    margin:0 auto 30px;
-    line-height:1.65;
-  }
-  .quienes{
-    max-width:560px;
-    margin:0 auto;
-    text-align:left;
-    background:rgba(247,244,238,.06);
-    border:1px solid rgba(201,166,107,.3);
-    border-radius:3px;
-    padding:22px 24px;
-  }
-  .quienes .tag{
-    font-size:10.5px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--dorado);
-    margin-bottom:10px;
-    font-weight:500;
-  }
-  .quienes p{
-    font-size:14px;
-    line-height:1.7;
-    color:#e5e0d2;
-  }
+/* Barra carrito móvil */
+.barra-pedido{position:fixed;left:12px;right:84px;bottom:18px;z-index:44;background:var(--verde-deep);color:var(--hueso);border-radius:40px;padding:12px 18px;display:none;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 8px 22px rgba(0,0,0,.25);border:none;font-size:14px;text-align:left}
+.barra-pedido b{color:var(--dorado)}
+.barra-pedido.ver{display:flex}
 
-  /* VÍNCULO CON BIOBALANCE */
-  .vinculo{
-    background:var(--hueso);
-    padding:64px 20px 70px;
-    border-bottom:1px solid var(--linea);
-    position:relative;
-  }
-  .vinculo::before{
-    content:"";
-    position:absolute; left:50%; top:0;
-    transform:translateX(-50%);
-    width:64px; height:3px;
-    background:var(--dorado);
-  }
-  .vinculo-card{
-    max-width:640px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    text-align:center;
-  }
-  .vinculo-card .tag{
-    font-size:12px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--rosa-pro);
-    font-weight:500;
-  }
-  .vinculo-card h2{
-    font-size:clamp(30px, 6vw, 42px);
-    line-height:1.12;
-    color:var(--verde-deep);
-  }
-  .vinculo-card p{
-    font-size:16.5px;
-    line-height:1.75;
-    color:#4a4638;
-    max-width:500px;
-    margin:0 auto;
-  }
-  .btn-bb{
-    display:inline-block;
-    margin:10px auto 0;
-    font-family:'Outfit', sans-serif;
-    font-size:14.5px; font-weight:500; letter-spacing:0.04em;
-    padding:17px 40px; border-radius:2px;
-    background:var(--verde-deep); color:var(--hueso);
-    text-decoration:none;
-    transition:background .15s, transform .15s;
-  }
-  .btn-bb:hover{ background:var(--verde); transform:translateY(-1px); }
-  .badge-oficial{
-    margin-top:14px;
-    font-size:11px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--verde);
-    font-weight:500;
-  }
+/* Carrito */
+.velo{position:fixed;inset:0;background:rgba(21,42,32,.45);z-index:60;opacity:0;pointer-events:none;transition:opacity .2s}
+.velo.ver{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--hueso);z-index:61;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.panel.ver{transform:none}
+.panel-head{display:flex;justify-content:space-between;align-items:center;padding:18px 18px 14px;border-bottom:1px solid var(--linea)}
+.panel-head h2{font-size:28px;color:var(--verde-deep)}
+.cerrar{background:none;border:none;font-size:28px;color:var(--verde);line-height:1;padding:4px 8px}
+.panel-body{flex:1;overflow-y:auto;padding:14px 18px}
+.item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #ebe5d6}
+.item .mini{flex:0 0 58px;height:58px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.item .mini img{max-width:90%;max-height:90%}
+.item .det{flex:1;min-width:0}
+.item .det b{display:block;font-size:14px;font-weight:500;color:var(--verde-deep);line-height:1.25}
+.item .det span{font-size:12px;color:#8a8471}
+.item .ctrl{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty{display:flex;align-items:center;border:1px solid var(--linea);border-radius:20px;background:#fff}
+.qty button{background:none;border:none;width:30px;height:28px;font-size:16px;color:var(--verde)}
+.qty span{min-width:22px;text-align:center;font-size:14px}
+.quitar{background:none;border:none;font-size:12px;color:#9a947f;text-decoration:underline}
+.item .sub{font-weight:600;color:var(--verde-deep);font-size:14px;white-space:nowrap}
+.envio-bar{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:12px 14px;margin:6px 0 14px;font-size:13px;color:#4a4638}
+.envio-bar .track{height:7px;background:#ece7d9;border-radius:10px;margin-top:8px;overflow:hidden}
+.envio-bar .fill{height:100%;background:var(--wa);border-radius:10px;transition:width .3s}
+.panel-foot{border-top:1px solid var(--linea);padding:14px 18px 18px;background:#fff}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.total span{font-size:14px}
+.total b{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--verde-deep)}
+.nota-pie{font-size:11.5px;color:#8a8471;line-height:1.45;margin-bottom:12px}
+.panel-foot .btn{width:100%;margin-top:8px}
+.form-mini{display:flex;gap:8px;margin-bottom:6px}
+.form-mini input{flex:1;min-width:0;font-family:inherit;font-size:14px;padding:10px 12px;border:1px solid var(--linea);border-radius:8px}
+.vacio-carrito{text-align:center;padding:40px 10px;color:#7a7462;font-size:14.5px;line-height:1.6}
 
-  #catalogo{
-    padding:36px 20px 30px;
-  }
-  #catalogo .eyebrow{
-    font-size:11px;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--dorado);
-    margin-bottom:14px;
-  }
-  #catalogo h2{
-    font-size:clamp(26px, 6vw, 36px);
-    line-height:1.1;
-    margin-bottom:10px;
-    color:var(--verde-deep);
-  }
-  #catalogo p.sub{
-    font-size:14px;
-    color:#6b6553;
-    max-width:520px;
-    line-height:1.5;
-  }
+/* Ficha producto */
+.modal{position:fixed;inset:0;z-index:62;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.ver{display:flex}
+.modal .caja{background:#fff;border-radius:14px;max-width:720px;width:100%;max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+@media(max-width:640px){.modal .caja{grid-template-columns:1fr}}
+.modal .foto-g{background:#faf8f3;display:flex;align-items:center;justify-content:center;padding:26px;min-height:240px}
+.modal .foto-g img{max-width:100%;max-height:340px}
+.modal .txt{padding:26px 22px;display:flex;flex-direction:column;gap:10px}
+.modal .txt h3{font-size:30px;line-height:1.05;color:var(--verde-deep)}
+.modal .txt p{font-size:14px;line-height:1.6;color:#4a4638}
+.modal .cerrar{position:absolute;top:8px;right:8px;background:#fff;border-radius:50%;width:38px;height:38px}
+.toast{position:fixed;left:50%;top:76px;transform:translateX(-50%) translateY(-12px);background:var(--verde-deep);color:var(--hueso);padding:11px 18px;border-radius:30px;font-size:13.5px;z-index:70;opacity:0;transition:.25s;pointer-events:none;white-space:nowrap}
+.toast.ver{opacity:1;transform:translateX(-50%)}
+
+/* Perfil */
+.perfil{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;max-width:960px}
+.perfil-foto img{width:260px;height:260px;border-radius:50%;object-fit:cover;border:4px solid var(--dorado);box-shadow:0 14px 34px rgba(0,0,0,.25);display:block}
+.perfil-txt{text-align:left}
+.perfil-txt p{text-align:left;margin-bottom:14px}
+.perfil-txt p b{color:var(--hueso);font-weight:500}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
+.roles span{font-size:12px;border:1px solid rgba(201,166,107,.55);color:var(--dorado);border-radius:20px;padding:5px 12px}
+@media(max-width:760px){.perfil{grid-template-columns:1fr;gap:22px;text-align:center}.perfil-foto img{width:190px;height:190px;margin:0 auto}.perfil-txt,.perfil-txt p{text-align:center}.roles{justify-content:center}.perfil .hero-ctas{justify-content:center!important}}
+/* BioBalance */
+:root{--bb-verde:#228B22;--bb-naranja:#FF8C00}
+.bb{background:#fff;border-top:4px solid var(--bb-verde)}
+.bb-head{display:flex;gap:18px;align-items:center;justify-content:center;text-align:left;margin-bottom:14px}
+.bb-head img{width:80px;height:80px;flex:0 0 80px}
+.bb-head h2{font-size:clamp(26px,5vw,38px);line-height:1.1;color:var(--verde-deep)}
+.bb-intro{text-align:center;max-width:620px;margin:0 auto 28px;font-size:15px;line-height:1.6;color:#4a4638}
+.bb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bb-card{display:flex;flex-direction:column;border:1px solid var(--linea);border-radius:12px;overflow:hidden;text-decoration:none;background:var(--hueso);transition:transform .15s,box-shadow .15s}
+.bb-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(34,139,34,.14)}
+.bb-card img{width:100%;height:180px;object-fit:cover}
+.bb-card div{padding:14px 16px 18px}
+.bb-card b{display:block;font-size:17px;color:var(--bb-verde);margin-bottom:4px}
+.bb-card span{font-size:13.5px;line-height:1.5;color:#4a4638}
+.btn-bb{background:var(--bb-naranja);color:#fff;font-weight:600}
+@media(max-width:760px){.bb-grid{grid-template-columns:1fr}.bb-head{flex-direction:column;text-align:center}.bb-card img{height:160px}}
 </style>
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="marca">Silvina <span>Beauty</span></div>
-  <div class="links">
-    <a href="#catalogo">Catálogo</a>
-    <a href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">BioBalance ↗</a>
+<div class="aviso">🚚 Envío GRATIS en compras desde $70.000 · Enviamos a todo el país</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="marca" href="#">Silvina <span>Beauty</span></a>
+    <div class="nav-links">
+      <a href="#destacados">Más elegidos</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#biobalance">BioBalance</a>
+      <button class="btn-carrito" id="abrirCarrito" aria-label="Ver mi pedido">🛍️ Mi pedido <span class="num" id="numCarrito">0</span></button>
+    </div>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-eyebrow">Silvina Ortiz · Santa Rosa, La Pampa</div>
-  <h1>Cuidarte, por dentro<br>y por fuera</h1>
-  <p class="lead">Silvina Beauty es la cosmética profesional que acompaña el trabajo de bienestar que hacemos en BioBalance: cuidado real, pensado para pieles y personas concretas.</p>
-  <div class="quienes">
-    <div class="tag">Quiénes somos</div>
-    <p>Soy Silvina Ortiz, terapeuta en BioBalance y revendedora oficial de Laboratorio LACA. Elijo cada producto del catálogo pensando en las mismas personas que atiendo en sesión: pieles reales, rutinas simples, resultados que se notan. Cosmética profesional con respaldo técnico, para usar en casa o en gabinete.</p>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Revendedora oficial · Laboratorio LACA</div>
+    <h1>Tu piel, cuidada con<br><em>cosmética profesional</em></h1>
+    <p class="lead">Más de 180 productos LACA con precio de lista. Armá tu pedido acá, te asesoro por WhatsApp y lo recibís en tu casa, estés donde estés.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-oro" href="#catalogo">Ver catálogo y precios</a>
+      <a class="btn btn-borde" id="waHero" href="#" target="_blank" rel="noopener">Quiero que me asesores</a>
+    </div>
+  </div>
+</header>
+
+<div class="confianza">
+  <div class="wrap">
+    <div class="conf"><div class="ico">✔️</div><div><b>100% originales</b>Reventa autorizada LACA</div></div>
+    <div class="conf"><div class="ico">🚚</div><div><b>Envío a todo el país</b>Gratis desde $70.000</div></div>
+    <div class="conf"><div class="ico">💳</div><div><b>Mercado Pago</b>o transferencia</div></div>
+    <div class="conf"><div class="ico">💬</div><div><b>Asesoramiento</b>personal por WhatsApp</div></div>
+  </div>
+</div>
+
+<section id="destacados">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Para empezar tu rutina</div>
+      <h2>Los más elegidos</h2>
+      <p>Limpieza, hidratación facial y cuidado corporal: los tres pasos básicos que tu piel nota desde la primera semana.</p>
+    </div>
+    <div class="grid" id="gridDestacados"></div>
   </div>
 </section>
 
-<div class="vinculo">
-  <div class="vinculo-card">
-    <div class="tag">Un mismo cuidado, dos espacios</div>
-    <h2>¿Buscás algo más profundo?</h2>
-    <p>En BioBalance trabajamos Biomagnetismo, Método Códica y terapias corporales para el bienestar integral, presencial en Santa Rosa y online a todo el país.</p>
-    <a class="btn-bb" href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">Conocer BioBalance →</a>
-    <div class="badge-oficial">Reventa autorizada · Laboratorio LACA</div>
+<div class="aniv">
+  <div class="wrap">
+    <div class="num70">70</div>
+    <div>
+      <div class="eyebrow" style="color:var(--rosa)">Aniversario Laboratorio LACA</div>
+      <h2>LACA cumple 70 años y lo festeja con promociones especiales</h2>
+      <p>Mirá las promos del catálogo oficial Primavera–Verano y pedímelas por WhatsApp: te las consigo con envío a tu casa.</p>
+      <a class="btn btn-verde" href="https://catalogo.laboratoriolaca.com/" target="_blank" rel="noopener">Ver promos del aniversario →</a>
+    </div>
   </div>
 </div>
 
-<header id="catalogo">
-  <div class="eyebrow">Silvina Beauty · Revendedora oficial LACA</div>
-  <h2>Catálogo LACA</h2>
-  <p class="sub">Buscá tu producto, mirá el precio y pedilo por WhatsApp. Enviamos a todo el país.</p>
-</header>
-
-<div class="controls">
-  <div class="search-row">
-    <input type="text" id="buscador" placeholder="Buscar producto o activo…">
+<section id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Catálogo completo</div>
+      <h2>Encontrá lo que tu piel necesita</h2>
+      <p>Buscá por producto, activo o necesidad (manchas, acné, arrugas…). Sumalo a tu pedido y enviámelo por WhatsApp en un solo mensaje.</p>
+    </div>
+    <div class="controles">
+      <div class="fila">
+        <input type="search" id="buscador" placeholder="Buscar: retinol, manchas, protector…" aria-label="Buscar producto">
+        <select id="orden" aria-label="Ordenar">
+          <option value="rel">Ordenar</option>
+          <option value="asc">Menor precio</option>
+          <option value="desc">Mayor precio</option>
+          <option value="az">A–Z</option>
+        </select>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="contador" id="contador"></div>
+    <div class="grid" id="grid"></div>
+    <div class="vacio" id="vacio" style="display:none">No encontramos ese producto.<br><a id="waVacio" href="#" target="_blank" rel="noopener">Preguntame por WhatsApp</a> y te digo si lo tengo.</div>
+    <button class="btn btn-verde mas" id="verMas" style="display:none">Ver más productos</button>
   </div>
-  <div class="usage-toggle">
-    <button class="active" data-uso="todos">Todos</button>
-    <button data-uso="casa">Uso en casa</button>
-    <button data-uso="pro">Profesional</button>
+</section>
+
+<section id="como-comprar" style="background:#fff;border-top:1px solid var(--linea)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Simple y seguro</div>
+      <h2>Cómo comprar</h2>
+    </div>
+    <div class="pasos">
+      <div class="paso"><div class="n">1</div><h3>Armá tu pedido</h3><p>Tocá “Agregar al pedido” en los productos que quieras. Podés elegir cantidades y ver el total al instante.</p></div>
+      <div class="paso"><div class="n">2</div><h3>Envialo por WhatsApp</h3><p>Con un toque me llega tu pedido completo. Te confirmo stock y el costo de envío a tu ciudad (gratis desde $70.000).</p></div>
+      <div class="paso"><div class="n">3</div><h3>Pagá y recibí</h3><p>Pagás con Mercado Pago (tarjeta, débito o dinero en cuenta) o transferencia, y te lo enviamos a tu casa.</p></div>
+    </div>
   </div>
-  <div class="cat-scroll" id="catScroll"></div>
-</div>
+</section>
 
-<div class="count-bar" id="countBar"></div>
+<section class="sobre" id="sobre-mi">
+  <div class="wrap perfil">
+    <div class="perfil-foto"><img src="img/silvina.webp" alt="Silvina Ortiz" width="260" height="260" loading="lazy"></div>
+    <div class="perfil-txt">
+      <div class="eyebrow">Quién te asesora</div>
+      <h2>Hola, soy Silvina Ortiz</h2>
+      <div class="roles"><span>Consultora Método Códica</span><span>BioBalance Facial</span><span>Revendedora oficial LACA</span></div>
+      <p>Acompaño a personas en su bienestar desde <b>BioBalance</b>, el centro que creé junto a Osmar Lobos en Santa Rosa, La Pampa. Ahí trabajo el rostro con BioBalance Facial (Kobido, fango y biomagnetismo facial) y veo todos los días lo que una piel bien cuidada cambia en cómo una persona se siente.</p>
+      <p>Por eso elegí LACA: cosmética profesional con respaldo técnico, que recomiendo con la misma mirada que uso en gabinete. <b>No vendo productos sueltos: te ayudo a armar una rutina simple que puedas sostener.</b></p>
+      <div class="hero-ctas" style="justify-content:flex-start">
+        <a class="btn btn-wa" id="waSobre" href="#" target="_blank" rel="noopener">Pedime tu rutina gratis</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<main>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" style="display:none;">No se encontraron productos con esos filtros.</div>
-</main>
+<section class="bb" id="biobalance">
+  <div class="wrap">
+    <div class="bb-head">
+      <img src="img/logo-biobalance.webp" alt="Logo BioBalance" width="80" height="80" loading="lazy">
+      <div>
+        <div class="eyebrow" style="color:var(--bb-verde)">Silvina Beauty es parte de BioBalance</div>
+        <h2>Cuidarte por fuera en casa.<br>Cuidarte por dentro en BioBalance.</h2>
+      </div>
+    </div>
+    <p class="bb-intro">Los productos LACA cuidan tu piel todos los días. En BioBalance te acompañamos con terapias complementarias para tu bienestar integral, presencial en Santa Rosa y online a todo el país.</p>
+    <div class="bb-grid">
+      <a class="bb-card" href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">
+        <img src="img/kobido.webp" alt="BioBalance Facial" loading="lazy">
+        <div><b>BioBalance Facial</b><span>Kobido + fango + biomagnetismo facial. El complemento ideal de tu rutina LACA.</span></div>
+      </a>
+      <a class="bb-card" href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">
+        <img src="img/biomagnetismo.webp" alt="Biomagnetismo" loading="lazy">
+        <div><b>Biomagnetismo</b><span>Terapia complementaria con imanes que acompaña el equilibrio de tu cuerpo.</span></div>
+      </a>
+      <a class="bb-card" href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">
+        <img src="img/metodo-codica.webp" alt="Método Códica" loading="lazy">
+        <div><b>Método Códica</b><span>Un proceso para trabajar hacia adentro, presencial u online.</span></div>
+      </a>
+    </div>
+    <div class="hero-ctas" style="margin-top:26px">
+      <a class="btn btn-bb" href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">Conocer BioBalance →</a>
+      <a class="btn btn-borde" style="color:var(--bb-verde);border-color:var(--bb-verde)" id="waTurno" href="#" target="_blank" rel="noopener">Reservar un turno</a>
+    </div>
+  </div>
+</section>
 
-<footer>Silvina Beauty · Revendedora oficial Laboratorio LACA · Santa Rosa, La Pampa · Envíos a todo el país<br>Lista de precios julio 2026 — pueden variar sin previo aviso</footer>
+<section id="preguntas">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Tus dudas</div><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details><summary>¿Los productos son originales?</summary><p>Sí. Soy revendedora oficial autorizada de Laboratorio LACA. Todos los productos son originales, sellados y con su fecha de vencimiento.</p></details>
+      <details><summary>¿Hacen envíos? ¿Cuánto cuesta?</summary><p>Enviamos a todo el país. En compras desde $70.000 el envío es gratis. Para compras menores, te paso el costo según tu ciudad cuando confirmamos el pedido por WhatsApp.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Con Mercado Pago (tarjeta de crédito, débito o dinero en cuenta) o por transferencia bancaria. Primero confirmamos el pedido por WhatsApp y después pagás el total.</p></details>
+      <details><summary>¿Cuánto tarda en llegar?</summary><p>Depende de tu ciudad. Al confirmar el pedido te digo el tiempo estimado de entrega.</p></details>
+      <details><summary>No sé qué producto elegir, ¿me ayudás?</summary><p>¡Claro! Contame tu tipo de piel y qué te gustaría mejorar (manchas, arrugas, acné, sequedad…) y te recomiendo una rutina.</p></details>
+      <details><summary>¿Qué significa “Solo gabinete”?</summary><p>Son productos de uso profesional, pensados para cosmetólogas y centros de estética.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b style="color:var(--hueso)">Silvina Beauty</b> · Revendedora oficial Laboratorio LACA · Santa Rosa, La Pampa · Envíos a todo el país<br>
+  Parte de <a href="https://espanholsmo-design.github.io/BioBalance/" target="_blank" rel="noopener">BioBalance</a> · Centro de bienestar · <a href="https://instagram.com/BioBalance.santarosa" target="_blank" rel="noopener">Instagram @BioBalance.santarosa</a><br>
+  Precios de lista julio 2026 · pueden variar sin previo aviso
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.6C28.7 8.6 23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.3 1.1 1.1-4.2-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.1 9.8 10 5 16 5s10.8 4.8 10.8 10.6S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.3-.3-.4-.6-.5z"/></svg></a>
+
+<button class="barra-pedido" id="barraPedido"><span>🛍️ <span id="barraTxt"></span></span><b>Ver pedido →</b></button>
+
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Mi pedido">
+  <div class="panel-head"><h2>Mi pedido</h2><button class="cerrar" id="cerrarCarrito" aria-label="Cerrar">×</button></div>
+  <div class="panel-body" id="panelBody"></div>
+  <div class="panel-foot" id="panelFoot">
+    <div class="total"><span>Total productos</span><b id="totalTxt">$0</b></div>
+    <div class="nota-pie" id="notaEnvio"></div>
+    <div class="form-mini">
+      <input id="cliNombre" placeholder="Tu nombre" autocomplete="name">
+      <input id="cliCiudad" placeholder="Tu ciudad" autocomplete="address-level2">
+    </div>
+    <a class="btn btn-wa" id="enviarPedido" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+    <a class="btn btn-borde" style="color:var(--verde);border-color:var(--verde)" href="https://link.mercadopago.com.ar/biomagnetismo" target="_blank" rel="noopener">💳 Pagar con Mercado Pago</a>
+    <div class="nota-pie" style="margin:10px 0 0;text-align:center">Pagá después de que confirmemos stock y envío por WhatsApp.</div>
+  </div>
+</aside>
+
+<div class="modal" id="modal"><div class="velo ver" id="modalVelo" style="z-index:0"></div><div class="caja" id="modalCaja" style="z-index:1"></div></div>
+<div class="toast" id="toast"></div>
 
 <script src="productos.js"></script>
 <script>
-  const grid = document.getElementById('grid');
-  const empty = document.getElementById('empty');
-  const countBar = document.getElementById('countBar');
-  const catScroll = document.getElementById('catScroll');
-  const buscador = document.getElementById('buscador');
-  const usageBtns = document.querySelectorAll('.usage-toggle button');
-
+(function(){
   const WSP = '5492954712458';
-  function linkPedido(p){
-    const precioTxt = p.precio ? ' ($' + p.precio.toLocaleString('es-AR') + ')' : '';
-    const msj = encodeURIComponent('Hola Silvina Beauty! Quiero pedir: ' + p.n + (p.p ? ' - ' + p.p : '') + precioTxt);
-    return 'https://wa.me/' + WSP + '?text=' + msj;
+  const ENVIO_GRATIS = 70000;
+  const DESTACADOS = ['gel-de-limpieza-protector','leche-de-limpieza-con-fitoflavonas-de-soja','emulsion-humectante-hidra-plus','vital-body-emulsion'];
+  const POR_PAGINA = 24;
+  const $ = id => document.getElementById(id);
+  const plata = n => '$' + Math.round(n).toLocaleString('es-AR');
+  const wa = txt => 'https://wa.me/' + WSP + '?text=' + encodeURIComponent(txt);
+  const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const nombre = p => p.n + (p.s ? ' ' + p.s : '');
+  const porId = {}; PRODUCTOS.forEach(p => porId[p.id] = p);
+
+  // Links generales de WhatsApp
+  $('waHero').href = wa('Hola Silvina! Vi tu página y quiero que me asesores con una rutina para mi piel.');
+  $('waSobre').href = wa('Hola Silvina! Quiero que me armes una rutina para mi piel.');
+  $('waTurno').href = wa('Hola! Vengo de Silvina Beauty y quiero reservar un turno en BioBalance.');
+  $('waFloat').href = wa('Hola Silvina! Vi tu página de Silvina Beauty y quiero consultar.');
+
+  // ---------- Carrito ----------
+  let carrito = {};
+  try { carrito = JSON.parse(localStorage.getItem('sb_carrito') || '{}') || {}; } catch(e) { carrito = {}; }
+  Object.keys(carrito).forEach(k => { if(!porId[k] || !porId[k].precio) delete carrito[k]; });
+  const guardar = () => { try { localStorage.setItem('sb_carrito', JSON.stringify(carrito)); } catch(e){} };
+  const cantTotal = () => Object.values(carrito).reduce((a,b)=>a+b,0);
+  const montoTotal = () => Object.entries(carrito).reduce((a,[id,q])=>a + porId[id].precio*q, 0);
+
+  function agregar(id, btn){
+    carrito[id] = (carrito[id]||0) + 1; guardar(); pintarCarrito();
+    const b = $('abrirCarrito'); b.classList.remove('salto'); void b.offsetWidth; b.classList.add('salto');
+    if(btn){ btn.classList.add('ok'); btn.textContent = '✓ Agregado'; setTimeout(()=>{btn.classList.remove('ok'); btn.textContent='Agregar al pedido';}, 1400); }
+    toast('Agregado: ' + porId[id].n);
   }
-  function linkConsulta(p){
-    const msj = encodeURIComponent('Hola Silvina Beauty! Quiero consultar el precio de: ' + p.n + (p.p ? ' - ' + p.p : ''));
-    return 'https://wa.me/' + WSP + '?text=' + msj;
-  }
+  function cambiar(id, d){ carrito[id] = (carrito[id]||0) + d; if(carrito[id] <= 0) delete carrito[id]; guardar(); pintarCarrito(); }
 
-  let usoActivo = 'todos';
-  let catActiva = 'todas';
-  let query = '';
-
-  // Build category chips
-  const categorias = ['todas', ...new Set(PRODUCTOS.map(p => p.c))];
-  categorias.forEach(cat => {
-    const chip = document.createElement('button');
-    chip.className = 'cat-chip' + (cat === 'todas' ? ' active' : '');
-    chip.textContent = cat === 'todas' ? 'Todas las categorías' : cat;
-    chip.dataset.cat = cat;
-    chip.addEventListener('click', () => {
-      catActiva = cat;
-      document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      render();
-    });
-    catScroll.appendChild(chip);
-  });
-
-  usageBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      usoActivo = btn.dataset.uso;
-      usageBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      render();
-    });
-  });
-
-  buscador.addEventListener('input', (e) => {
-    query = e.target.value.trim().toLowerCase();
-    render();
-  });
-
-  function render(){
-    const filtrados = PRODUCTOS.filter(p => {
-      const esPro = !!p.pro;
-      if(usoActivo === 'casa' && esPro) return false;
-      if(usoActivo === 'pro' && !esPro) return false;
-      if(catActiva !== 'todas' && p.c !== catActiva) return false;
-      if(query){
-        const hay = (p.n + ' ' + (p.s||'') + ' ' + (p.a||'') + ' ' + p.c).toLowerCase();
-        if(!hay.includes(query)) return false;
-      }
-      return true;
-    });
-
-    grid.innerHTML = '';
-    if(filtrados.length === 0){
-      empty.style.display = 'block';
-    } else {
-      empty.style.display = 'none';
-      filtrados.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'card' + (p.pro ? ' pro' : '');
-        card.innerHTML = `
-          <span class="badge ${p.pro ? 'pro' : 'casa'}">${p.pro ? 'Solo gabinete' : 'Uso en casa'}</span>
-          ${p.img ? `<div class="foto"><img src="${p.img}" alt="${p.n}" loading="lazy"></div>` : ''}
-          <div class="cat-label">${p.c}</div>
-          <h3>${p.n}</h3>
-          ${p.s ? `<div class="sline">${p.s}</div>` : ''}
-          <div class="benefit">${p.b}</div>
-          <div class="meta">
-            ${p.a ? `<div><b>Activos:</b> ${p.a}</div>` : ''}
-            ${p.p ? `<div><b>Presentación:</b> ${p.p}</div>` : ''}
-          </div>
-          <div class="precio-row">
-            ${p.precio
-              ? `<div class="precio">$${p.precio.toLocaleString('es-AR')}${p.nota ? ` <small>${p.nota}</small>` : ''}</div><a class="btn-wa" href="${linkPedido(p)}" target="_blank" rel="noopener">Pedir por WhatsApp</a>`
-              : `<div class="precio"><small>Precio a consultar</small></div><a class="btn-wa consulta" href="${linkConsulta(p)}" target="_blank" rel="noopener">Consultar</a>`}
-          </div>
-        `;
-        grid.appendChild(card);
-      });
+  function pintarCarrito(){
+    const n = cantTotal(), total = montoTotal();
+    $('numCarrito').textContent = n;
+    $('barraTxt').innerHTML = n + (n===1?' producto':' productos') + ' · ' + plata(total);
+    $('barraPedido').classList.toggle('ver', n>0 && window.innerWidth < 760);
+    const body = $('panelBody');
+    if(!n){
+      body.innerHTML = '<div class="vacio-carrito">Tu pedido está vacío.<br>Sumá productos desde el catálogo 👇<br><br><a class="btn btn-verde" href="#catalogo" data-cerrar>Ver catálogo</a></div>';
+      $('panelFoot').style.display = 'none';
+      return;
     }
-
-    const totalPro = PRODUCTOS.filter(p => p.pro).length;
-    countBar.textContent = `${filtrados.length} de ${PRODUCTOS.length} productos · ${PRODUCTOS.filter(p=>p.precio).length} con precio de lista`;
+    $('panelFoot').style.display = '';
+    const falta = ENVIO_GRATIS - total;
+    let html = '<div class="envio-bar">' + (falta > 0
+      ? 'Te faltan <b>' + plata(falta) + '</b> para el <b>envío gratis</b> 🚚'
+      : '🎉 ¡Tenés <b>envío gratis</b>!') +
+      '<div class="track"><div class="fill" style="width:' + Math.min(100, total/ENVIO_GRATIS*100) + '%"></div></div></div>';
+    Object.entries(carrito).forEach(([id,q]) => {
+      const p = porId[id];
+      html += '<div class="item"><div class="mini">' + (p.img ? '<img src="'+p.img+'" alt="">' : '✦') + '</div>' +
+        '<div class="det"><b>' + esc(nombre(p)) + '</b><span>' + esc(p.p||'') + ' · ' + plata(p.precio) + ' c/u</span>' +
+        '<div class="ctrl"><div class="qty"><button data-menos="'+id+'" aria-label="Menos">−</button><span>'+q+'</span><button data-mas="'+id+'" aria-label="Más">+</button></div>' +
+        '<button class="quitar" data-quitar="'+id+'">Quitar</button></div></div>' +
+        '<div class="sub">' + plata(p.precio*q) + '</div></div>';
+    });
+    body.innerHTML = html;
+    $('totalTxt').textContent = plata(total);
+    $('notaEnvio').textContent = falta > 0 ? '+ envío (te paso el costo a tu ciudad por WhatsApp)' : 'Envío gratis incluido.';
+    actualizarLinkPedido();
   }
+  function actualizarLinkPedido(){
+    const total = montoTotal();
+    let t = 'Hola Silvina! Quiero hacer este pedido desde la web:\n\n';
+    Object.entries(carrito).forEach(([id,q]) => { const p = porId[id]; t += '• ' + q + ' x ' + nombre(p) + (p.p ? ' (' + p.p + ')' : '') + ' — ' + plata(p.precio*q) + '\n'; });
+    t += '\nTotal productos: ' + plata(total) + (total >= ENVIO_GRATIS ? ' (con envío gratis)' : '');
+    const nom = $('cliNombre').value.trim(), ciu = $('cliCiudad').value.trim();
+    if(nom) t += '\nNombre: ' + nom;
+    if(ciu) t += '\nCiudad: ' + ciu;
+    t += '\n\n¿Me confirmás stock y envío?';
+    $('enviarPedido').href = wa(t);
+  }
+  ['cliNombre','cliCiudad'].forEach(i => $(i).addEventListener('input', actualizarLinkPedido));
 
+  $('panelBody').addEventListener('click', e => {
+    const t = e.target;
+    if(t.dataset.mas) cambiar(t.dataset.mas, 1);
+    else if(t.dataset.menos) cambiar(t.dataset.menos, -1);
+    else if(t.dataset.quitar){ delete carrito[t.dataset.quitar]; guardar(); pintarCarrito(); }
+    else if(t.hasAttribute('data-cerrar')) cerrarCarrito();
+  });
+  const abrirCarrito = () => { pintarCarrito(); $('panel').classList.add('ver'); $('velo').classList.add('ver'); };
+  const cerrarCarrito = () => { $('panel').classList.remove('ver'); $('velo').classList.remove('ver'); };
+  $('abrirCarrito').onclick = abrirCarrito; $('barraPedido').onclick = abrirCarrito;
+  $('cerrarCarrito').onclick = cerrarCarrito; $('velo').onclick = cerrarCarrito;
+  window.addEventListener('resize', () => $('barraPedido').classList.toggle('ver', cantTotal()>0 && window.innerWidth < 760));
+
+  let toastT;
+  function toast(m){ const t=$('toast'); t.textContent=m; t.classList.add('ver'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('ver'),1800); }
+
+  // ---------- Tarjetas ----------
+  function tarjeta(p, top){
+    const d = document.createElement('div');
+    d.className = 'card'; d.id = 'p-' + p.id;
+    d.innerHTML =
+      (p.pro ? '<span class="badge pro">Solo gabinete</span>' : top ? '<span class="badge top">Más elegido</span>' : '') +
+      '<div class="foto" data-ficha="'+p.id+'">' + (p.img ? '<img src="'+p.img+'" alt="'+esc(p.n)+'" loading="lazy" width="200" height="200">' : '<span class="sinfoto">LACA</span>') + '</div>' +
+      '<div class="info"><div class="cat">'+esc(p.c)+'</div><h3 data-ficha="'+p.id+'">'+esc(p.n)+'</h3>' +
+      (p.s ? '<div class="s">'+esc(p.s)+'</div>' : '') +
+      '<div class="ben">'+esc(p.b)+'</div>' +
+      (p.p ? '<div class="pres">'+esc(p.p)+'</div>' : '') +
+      '<div class="pie">' + (p.precio
+        ? '<div class="precio">'+plata(p.precio)+(p.nota?' <small>'+esc(p.nota)+'</small>':'')+'</div><button class="btn-add" data-add="'+p.id+'">Agregar al pedido</button>'
+        : '<div class="precio"><small>Precio a consultar</small></div><a class="btn-add consulta" style="text-align:center;text-decoration:none" target="_blank" rel="noopener" href="'+wa('Hola Silvina! Quiero consultar el precio de: ' + nombre(p))+'">Consultar precio</a>') +
+      '</div></div>';
+    return d;
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-add]'); if(a){ agregar(a.dataset.add, a); return; }
+    const f = e.target.closest('[data-ficha]'); if(f){ ficha(f.dataset.ficha); }
+  });
+
+  // Destacados
+  DESTACADOS.forEach(id => porId[id] && $('gridDestacados').appendChild(tarjeta(porId[id], true)));
+
+  // ---------- Ficha (modal) ----------
+  function ficha(id){
+    const p = porId[id]; if(!p) return;
+    $('modalCaja').innerHTML =
+      '<button class="cerrar" data-cerrarmodal aria-label="Cerrar">×</button>' +
+      '<div class="foto-g">' + (p.img ? '<img src="'+p.img+'" alt="'+esc(p.n)+'">' : '<span class="sinfoto" style="font-size:60px">LACA</span>') + '</div>' +
+      '<div class="txt"><div class="cat" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dorado);font-weight:600">'+esc(p.c)+'</div>' +
+      '<h3>'+esc(p.n)+'</h3>' + (p.s ? '<div class="s" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:18px;color:#6b6553">'+esc(p.s)+'</div>' : '') +
+      '<p>'+esc(p.b)+'</p>' + (p.a ? '<p><b>Activos:</b> '+esc(p.a)+'</p>' : '') + (p.p ? '<p><b>Presentación:</b> '+esc(p.p)+'</p>' : '') +
+      (p.pro ? '<p><b>Uso profesional</b> (gabinete).</p>' : '') +
+      (p.precio
+        ? '<div class="precio" style="font-size:32px">'+plata(p.precio)+'</div><button class="btn btn-verde" data-add="'+p.id+'" data-cerrarmodal>Agregar al pedido</button>'
+        : '') +
+      '<a class="btn btn-wa" target="_blank" rel="noopener" href="'+wa('Hola Silvina! Quiero consultar por: ' + nombre(p))+'">Consultar por WhatsApp</a></div>';
+    $('modal').classList.add('ver');
+    try { history.replaceState(null, '', '#' + p.id); } catch(e){}
+  }
+  function cerrarModal(){ $('modal').classList.remove('ver'); try { history.replaceState(null, '', location.pathname + location.search); } catch(e){} }
+  $('modal').addEventListener('click', e => { if(e.target.id === 'modalVelo' || e.target.closest('[data-cerrarmodal]')) cerrarModal(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape'){ cerrarModal(); cerrarCarrito(); } });
+
+  // ---------- Catálogo con filtros ----------
+  let cat = 'Todas', q = '', orden = 'rel', mostrar = POR_PAGINA;
+  const cats = ['Todas', ...new Set(PRODUCTOS.map(p => p.c))];
+  cats.forEach(c => {
+    const b = document.createElement('button');
+    b.className = 'chip' + (c === 'Todas' ? ' on' : ''); b.textContent = c;
+    b.onclick = () => { cat = c; mostrar = POR_PAGINA; document.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === b)); render(); };
+    $('chips').appendChild(b);
+  });
+  const norm = s => String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  const SINONIMOS = {manchas:'despigment aclar hiperpigment luminos', arrugas:'antiage arruga retinol colageno', acne:'grasa acne sebo', seca:'hidrat humect', protector:'solar fps', sol:'solar fps', pelo:'capilar', cabello:'capilar', ojos:'ojo contorno', hombre:'masculin'};
+  let busT;
+  $('buscador').addEventListener('input', e => { clearTimeout(busT); busT = setTimeout(() => { q = norm(e.target.value.trim()); mostrar = POR_PAGINA; render(); }, 150); });
+  $('orden').addEventListener('change', e => { orden = e.target.value; render(); });
+  $('verMas').onclick = () => { mostrar += POR_PAGINA; render(); };
+
+  function coincide(p){
+    if(cat !== 'Todas' && p.c !== cat) return false;
+    if(!q) return true;
+    const texto = norm([p.n,p.s,p.a,p.b,p.c,p.p].join(' '));
+    return q.split(/\s+/).every(w => texto.includes(w) || (SINONIMOS[w] && SINONIMOS[w].split(' ').some(s => texto.includes(s))));
+  }
+  function render(){
+    let lista = PRODUCTOS.filter(coincide);
+    if(orden === 'asc') lista = lista.slice().sort((a,b) => (a.precio||1e9) - (b.precio||1e9));
+    else if(orden === 'desc') lista = lista.slice().sort((a,b) => (b.precio||0) - (a.precio||0));
+    else if(orden === 'az') lista = lista.slice().sort((a,b) => a.n.localeCompare(b.n,'es'));
+    else lista = lista.slice().sort((a,b) => (!!b.precio - !!a.precio) || (!!b.img - !!a.img));
+    const g = $('grid'); g.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    lista.slice(0, mostrar).forEach(p => frag.appendChild(tarjeta(p)));
+    g.appendChild(frag);
+    $('vacio').style.display = lista.length ? 'none' : 'block';
+    $('verMas').style.display = lista.length > mostrar ? 'block' : 'none';
+    $('verMas').textContent = 'Ver más productos (' + (lista.length - mostrar) + ')';
+    $('contador').textContent = lista.length + (lista.length === 1 ? ' producto' : ' productos') + (cat !== 'Todas' ? ' en ' + cat : '');
+  }
+  $('waVacio').href = wa('Hola Silvina! Busco un producto LACA que no encontré en la página.');
   render();
-</script>
+  pintarCarrito();
 
+  // Link directo a un producto: .../silvina-beauty/#gel-de-limpieza-protector
+  const h = decodeURIComponent(location.hash.slice(1));
+  if(h && porId[h]) setTimeout(() => ficha(h), 200);
+})();
+</script>
 </body>
 </html>

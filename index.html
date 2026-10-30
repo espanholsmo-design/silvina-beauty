@@ -261,6 +261,17 @@ footer a{color:var(--dorado)}
 .kits-nota{text-align:center;font-size:13.5px;color:#7a6a62;margin-top:22px;line-height:1.6}
 .kits-nota a{color:#8f574b;font-weight:500}
 </style>
+<!-- Meta Pixel (BioBalance Pixel) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','892891176809318');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=892891176809318&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
 
@@ -527,6 +538,23 @@ footer a{color:var(--dorado)}
   const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const nombre = p => p.n + (p.s ? ' ' + p.s : '');
   const porId = {}; PRODUCTOS.forEach(p => porId[p.id] = p);
+  const px = (ev, data) => { try { if(window.fbq) fbq('track', ev, data || {}); } catch(e){} };
+
+  // Píxel de Meta: avisar cuando alguien envía el pedido, pide un kit, escribe por WhatsApp o va a pagar
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a'); if(!a || !a.href) return;
+    if(a.id === 'enviarPedido'){
+      const total = Object.entries(carrito).reduce((s,[id,q]) => s + porId[id].precio*q, 0);
+      px('InitiateCheckout', {content_ids:Object.keys(carrito), num_items:Object.values(carrito).reduce((s,q)=>s+q,0), value:total, currency:'ARS'});
+    } else if(a.classList.contains('btn-kit')){
+      const v = Number(String(a.dataset.precio||'').replace(/\D/g,'')) || undefined;
+      px('InitiateCheckout', {content_name:'Kit ' + a.dataset.kit, content_type:'product', value:v, currency:'ARS'});
+    } else if(a.href.indexOf('mercadopago') !== -1){
+      px('AddPaymentInfo', {currency:'ARS'});
+    } else if(a.href.indexOf('wa.me') !== -1){
+      px('Contact');
+    }
+  }, true);
 
   // Links generales de WhatsApp
   $('waHero').href = wa('Hola Silvina! Vi tu página y quiero que me asesores con una rutina para mi piel.');
@@ -549,6 +577,7 @@ footer a{color:var(--dorado)}
 
   function agregar(id, btn){
     carrito[id] = (carrito[id]||0) + 1; guardar(); pintarCarrito();
+    px('AddToCart', {content_ids:[id], content_name:porId[id].n, content_type:'product', value:porId[id].precio, currency:'ARS'});
     const b = $('abrirCarrito'); b.classList.remove('salto'); void b.offsetWidth; b.classList.add('salto');
     if(btn){ btn.classList.add('ok'); btn.textContent = '✓ Agregado'; setTimeout(()=>{btn.classList.remove('ok'); btn.textContent='Agregar al pedido';}, 1400); }
     toast('Agregado: ' + porId[id].n);
